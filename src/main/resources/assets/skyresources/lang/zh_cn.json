@@ -1,0 +1,19 @@
+{
+    "block.skyresources.magmafied_stone": "岩浆石",
+    "block.skyresources.sandy_netherrack": "沙化地狱岩",
+    "block.skyresources.alchemical_glass": "炼金玻璃",
+    "block.skyresources.blaze_powder_block": "烈焰粉块",
+    "block.skyresources.petrified_wood": "石化木",
+    "block.skyresources.petrified_planks": "石化木板",
+    "block.skyresources.hardened_coal_block": "硬化煤炭块",
+    "block.skyresources.dehydrated_cactus": "脱水仙人掌",
+    "block.skyresources.alchemical_coal_block": "赫耳墨斯煤炭块",
+    "block.skyresources.heavy_snow_block": "重型雪",
+
+    "item.skyresources.plant_matter": "自然物质",
+    "item.skyresources.enriched_bone_meal": "强化骨粉",
+    "item.skyresources.heavy_snowball": "重型雪球",
+    "item.skyresources.explosive_heavy_snowball": "爆炸性重型雪球",
+
+    "creativetab.skyresources.sky_resources_tab": "空岛资源"
+}
