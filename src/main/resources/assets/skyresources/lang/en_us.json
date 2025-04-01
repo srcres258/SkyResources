@@ -10,5 +10,10 @@
     "block.skyresources.alchemical_coal_block": "Alchemical Coal Block",
     "block.skyresources.heavy_snow_block": "Heavy Snow Block",
 
+    "item.skyresources.plant_matter": "Plant Matter",
+    "item.skyresources.enriched_bone_meal": "Enriched Bone Meal",
+    "item.skyresources.heavy_snowball": "Heavy Snowball",
+    "item.skyresources.explosive_heavy_snowball": "Explosive Heavy Snowball",
+
     "creativetab.skyresources.sky_resources_tab": "Sky Resources"
 }

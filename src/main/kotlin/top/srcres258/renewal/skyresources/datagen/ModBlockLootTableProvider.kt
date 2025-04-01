@@ -4,7 +4,9 @@ import net.minecraft.core.HolderLookup
 import net.minecraft.data.loot.BlockLootSubProvider
 import net.minecraft.world.flag.FeatureFlags
 import net.minecraft.world.level.block.Block
+import net.minecraft.world.level.storage.loot.providers.number.ConstantValue
 import top.srcres258.renewal.skyresources.block.ModBlocks
+import top.srcres258.renewal.skyresources.item.ModItems
 
 class ModBlockLootTableProvider(
     registries: HolderLookup.Provider
@@ -19,7 +21,14 @@ class ModBlockLootTableProvider(
         dropSelf(ModBlocks.HARDENED_COAL_BLOCK.get())
         dropSelf(ModBlocks.DEHYDRATED_CACTUS.get())
         dropSelf(ModBlocks.ALCHEMICAL_COAL_BLOCK.get())
-        dropSelf(ModBlocks.HEAVY_SNOW_BLOCK.get()) // TODO: Replace drops with heavy snow items when latter is ready
+        add(
+            ModBlocks.HEAVY_SNOW_BLOCK.get(),
+            createSingleItemTableWithSilkTouch(
+                ModBlocks.HEAVY_SNOW_BLOCK.get(),
+                ModItems.HEAVY_SNOWBALL.get(),
+                ConstantValue.exactly(4F)
+            )
+        )
     }
 
     override fun getKnownBlocks(): Iterable<Block> = Iterable {

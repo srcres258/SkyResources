@@ -27,6 +27,11 @@ object ModCreativeModeTabs {
                 output.accept(ModBlocks.DEHYDRATED_CACTUS)
                 output.accept(ModBlocks.ALCHEMICAL_COAL_BLOCK)
                 output.accept(ModBlocks.HEAVY_SNOW_BLOCK)
+
+                output.accept(ModItems.PLANT_MATTER)
+                output.accept(ModItems.ENRICHED_BONE_MEAL)
+                output.accept(ModItems.HEAVY_SNOWBALL)
+                output.accept(ModItems.EXPLOSIVE_HEAVY_SNOWBALL)
             }
             .build()
     }
