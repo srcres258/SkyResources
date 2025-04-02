@@ -6,11 +6,15 @@ import net.neoforged.neoforge.registries.DeferredItem
 import net.neoforged.neoforge.registries.DeferredRegister
 import top.srcres258.renewal.skyresources.SkyResources
 import top.srcres258.renewal.skyresources.item.custom.*
+import top.srcres258.renewal.skyresources.util.AlchemicalLevel
 import top.srcres258.renewal.skyresources.util.GemType
 import top.srcres258.renewal.skyresources.util.MaterialType
+import top.srcres258.renewal.skyresources.util.OreType
 
 object ModItems {
     val ITEMS: DeferredRegister.Items = DeferredRegister.createItems(SkyResources.MOD_ID)
+
+    // ----- Basic Items -----
 
     val PLANT_MATTER: DeferredItem<Item> = registerItem("plant_matter") {
         Item(Item.Properties())
@@ -24,6 +28,8 @@ object ModItems {
     val EXPLOSIVE_HEAVY_SNOWBALL: DeferredItem<Item> = registerItem("explosive_heavy_snowball") {
         ExplosiveHeavySnowballItem(Item.Properties().stacksTo(8))
     }
+
+    // ----- Material Items -----
 
     val WOODEN_HEAT_COMPONENT: DeferredItem<Item> = registerItem("wooden_heat_component") {
         HeatComponentItem(
@@ -513,6 +519,210 @@ object ModItems {
         Item(Item.Properties())
     }
     val CRUSHED_NETHERRACK: DeferredItem<Item> = registerItem("crushed_netherrack") {
+        Item(Item.Properties())
+    }
+
+    // ----- Alchemical Items -----
+
+    val RADIOACTIVE_POWDER_MIXTURE: DeferredItem<Item> = registerItem("radioactive_powder_mixture") {
+        Item(Item.Properties())
+    }
+
+    val IRON_ALCHEMICAL_ORE_DUST: DeferredItem<Item> = registerItem("iron_alchemical_ore_dust") {
+        AlchemicalOreDustItem(
+            OreType.IRON,
+            Item.Properties()
+        )
+    }
+    val GOLD_ALCHEMICAL_ORE_DUST: DeferredItem<Item> = registerItem("gold_alchemical_ore_dust") {
+        AlchemicalOreDustItem(
+            OreType.GOLD,
+            Item.Properties()
+        )
+    }
+    val COPPER_ALCHEMICAL_ORE_DUST: DeferredItem<Item> = registerItem("copper_alchemical_ore_dust") {
+        AlchemicalOreDustItem(
+            OreType.COPPER,
+            Item.Properties()
+        )
+    }
+    val TIN_ALCHEMICAL_ORE_DUST: DeferredItem<Item> = registerItem("tin_alchemical_ore_dust") {
+        AlchemicalOreDustItem(
+            OreType.TIN,
+            Item.Properties()
+        )
+    }
+    val SILVER_ALCHEMICAL_ORE_DUST: DeferredItem<Item> = registerItem("silver_alchemical_ore_dust") {
+        AlchemicalOreDustItem(
+            OreType.SILVER,
+            Item.Properties()
+        )
+    }
+    val ZINC_ALCHEMICAL_ORE_DUST: DeferredItem<Item> = registerItem("zinc_alchemical_ore_dust") {
+        AlchemicalOreDustItem(
+            OreType.ZINC,
+            Item.Properties()
+        )
+    }
+    val NICKEL_ALCHEMICAL_ORE_DUST: DeferredItem<Item> = registerItem("nickel_alchemical_ore_dust") {
+        AlchemicalOreDustItem(
+            OreType.NICKEL,
+            Item.Properties()
+        )
+    }
+    val PLATINUM_ALCHEMICAL_ORE_DUST: DeferredItem<Item> = registerItem("platinum_alchemical_ore_dust") {
+        AlchemicalOreDustItem(
+            OreType.PLATINUM,
+            Item.Properties()
+        )
+    }
+    val ALUMINUM_ALCHEMICAL_ORE_DUST: DeferredItem<Item> = registerItem("aluminum_alchemical_ore_dust") {
+        AlchemicalOreDustItem(
+            OreType.ALUMINUM,
+            Item.Properties()
+        )
+    }
+    val LEAD_ALCHEMICAL_ORE_DUST: DeferredItem<Item> = registerItem("lead_alchemical_ore_dust") {
+        AlchemicalOreDustItem(
+            OreType.LEAD,
+            Item.Properties()
+        )
+    }
+    val COBALT_ALCHEMICAL_ORE_DUST: DeferredItem<Item> = registerItem("cobalt_alchemical_ore_dust") {
+        AlchemicalOreDustItem(
+            OreType.COBALT,
+            Item.Properties()
+        )
+    }
+    val ARDITE_ALCHEMICAL_ORE_DUST: DeferredItem<Item> = registerItem("ardite_alchemical_ore_dust") {
+        AlchemicalOreDustItem(
+            OreType.ARDITE,
+            Item.Properties()
+        )
+    }
+    val OSMIUM_ALCHEMICAL_ORE_DUST: DeferredItem<Item> = registerItem("osmium_alchemical_ore_dust") {
+        AlchemicalOreDustItem(
+            OreType.OSMIUM,
+            Item.Properties()
+        )
+    }
+    val DRACONIUM_ALCHEMICAL_ORE_DUST: DeferredItem<Item> = registerItem("draconium_alchemical_ore_dust") {
+        AlchemicalOreDustItem(
+            OreType.DRACONIUM,
+            Item.Properties()
+        )
+    }
+    val TITANIUM_ALCHEMICAL_ORE_DUST: DeferredItem<Item> = registerItem("titanium_alchemical_ore_dust") {
+        AlchemicalOreDustItem(
+            OreType.TITANIUM,
+            Item.Properties()
+        )
+    }
+    val TUNGSTEN_ALCHEMICAL_ORE_DUST: DeferredItem<Item> = registerItem("tungsten_alchemical_ore_dust") {
+        AlchemicalOreDustItem(
+            OreType.TUNGSTEN,
+            Item.Properties()
+        )
+    }
+    val CHROME_ALCHEMICAL_ORE_DUST: DeferredItem<Item> = registerItem("chrome_alchemical_ore_dust") {
+        AlchemicalOreDustItem(
+            OreType.CHROME,
+            Item.Properties()
+        )
+    }
+    val IRIDIUM_ALCHEMICAL_ORE_DUST: DeferredItem<Item> = registerItem("iridium_alchemical_ore_dust") {
+        AlchemicalOreDustItem(
+            OreType.IRIDIUM,
+            Item.Properties()
+        )
+    }
+    val BORON_ALCHEMICAL_ORE_DUST: DeferredItem<Item> = registerItem("boron_alchemical_ore_dust") {
+        AlchemicalOreDustItem(
+            OreType.BORON,
+            Item.Properties()
+        )
+    }
+    val LITHIUM_ALCHEMICAL_ORE_DUST: DeferredItem<Item> = registerItem("lithium_alchemical_ore_dust") {
+        AlchemicalOreDustItem(
+            OreType.LITHIUM,
+            Item.Properties()
+        )
+    }
+    val MAGNESIUM_ALCHEMICAL_ORE_DUST: DeferredItem<Item> = registerItem("magnesium_alchemical_ore_dust") {
+        AlchemicalOreDustItem(
+            OreType.MAGNESIUM,
+            Item.Properties()
+        )
+    }
+    val MITHRIL_ALCHEMICAL_ORE_DUST: DeferredItem<Item> = registerItem("mithril_alchemical_ore_dust") {
+        AlchemicalOreDustItem(
+            OreType.MITHRIL,
+            Item.Properties()
+        )
+    }
+    val YELLORIUM_ALCHEMICAL_ORE_DUST: DeferredItem<Item> = registerItem("yellorium_alchemical_ore_dust") {
+        AlchemicalOreDustItem(
+            OreType.YELLORIUM,
+            Item.Properties()
+        )
+    }
+    val URANIUM_ALCHEMICAL_ORE_DUST: DeferredItem<Item> = registerItem("uranium_alchemical_ore_dust") {
+        AlchemicalOreDustItem(
+            OreType.URANIUM,
+            Item.Properties()
+        )
+    }
+    val THORIUM_ALCHEMICAL_ORE_DUST: DeferredItem<Item> = registerItem("thorium_alchemical_ore_dust") {
+        AlchemicalOreDustItem(
+            OreType.THORIUM,
+            Item.Properties()
+        )
+    }
+
+    val PRIMUS_ALCHEMICAL_DUST: DeferredItem<Item> = registerItem("primus_alchemical_dust") {
+        AlchemicalDustItem(
+            AlchemicalLevel.PRIMUS,
+            Item.Properties()
+        )
+    }
+    val SECUNDUS_ALCHEMICAL_DUST: DeferredItem<Item> = registerItem("secundus_alchemical_dust") {
+        AlchemicalDustItem(
+            AlchemicalLevel.SECUNDUS,
+            Item.Properties()
+        )
+    }
+    val TERTIUS_ALCHEMICAL_DUST: DeferredItem<Item> = registerItem("tertius_alchemical_dust") {
+        AlchemicalDustItem(
+            AlchemicalLevel.TERTIUS,
+            Item.Properties()
+        )
+    }
+    val QUARTUS_ALCHEMICAL_DUST: DeferredItem<Item> = registerItem("quartus_alchemical_dust") {
+        AlchemicalDustItem(
+            AlchemicalLevel.QUARTUS,
+            Item.Properties()
+        )
+    }
+
+    val ALCHEMICAL_COAL: DeferredItem<Item> = registerItem("alchemical_coal") {
+        Item(Item.Properties())
+    }
+    val ALCHEMICAL_GOLD_INGOT: DeferredItem<Item> = registerItem("alchemical_gold_ingot") {
+        Item(Item.Properties())
+    }
+    val ALCHEMICAL_IRON_INGOT: DeferredItem<Item> = registerItem("alchemical_iron_ingot") {
+        Item(Item.Properties())
+    }
+    val ALCHEMICAL_DIAMOND: DeferredItem<Item> = registerItem("alchemical_diamond") {
+        Item(Item.Properties())
+    }
+    val DARK_MATTER: DeferredItem<Item> = registerItem("dark_matter") {
+        Item(Item.Properties())
+    }
+    val LIGHT_MATTER: DeferredItem<Item> = registerItem("light_matter") {
+        Item(Item.Properties())
+    }
+    val CRYSTAL_SHARD: DeferredItem<Item> = registerItem("crystal_shard") {
         Item(Item.Properties())
     }
 

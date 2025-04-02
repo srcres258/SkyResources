@@ -3,6 +3,7 @@ package top.srcres258.renewal.skyresources.item
 import net.minecraft.core.registries.Registries
 import net.minecraft.network.chat.Component
 import net.minecraft.world.item.CreativeModeTab
+import net.minecraft.world.item.ItemStack
 import net.neoforged.bus.api.IEventBus
 import net.neoforged.neoforge.registries.DeferredRegister
 import top.srcres258.renewal.skyresources.SkyResources
@@ -10,12 +11,13 @@ import top.srcres258.renewal.skyresources.block.ModBlocks
 import java.util.function.Supplier
 
 object ModCreativeModeTabs {
-    val CREATIVE_MODE_TAB: DeferredRegister<CreativeModeTab> =
+    val CREATIVE_MODE_TABS: DeferredRegister<CreativeModeTab> =
         DeferredRegister.create(Registries.CREATIVE_MODE_TAB, SkyResources.MOD_ID)
 
-    val SKY_RESOURCES_TAB: Supplier<CreativeModeTab> = CREATIVE_MODE_TAB.register("sky_resources_tab") { ->
+    val SKY_RESOURCES_TAB: Supplier<CreativeModeTab> = CREATIVE_MODE_TABS.register("sky_resources_tab") { ->
         CreativeModeTab.builder()
             .title(Component.translatable("creativetab.skyresources.sky_resources_tab"))
+            .icon { ItemStack(ModItems.IRON_ALCHEMICAL_ORE_DUST.get()) }
             .displayItems { parameters, output ->
                 output.accept(ModBlocks.MAGMAFIED_STONE)
                 output.accept(ModBlocks.SANDY_NETHERRACK)
@@ -123,11 +125,52 @@ object ModCreativeModeTabs {
                 output.accept(ModItems.SAWDUST)
                 output.accept(ModItems.CRUSHED_STONE)
                 output.accept(ModItems.CRUSHED_NETHERRACK)
+
+                output.accept(ModItems.RADIOACTIVE_POWDER_MIXTURE)
+
+                output.accept(ModItems.IRON_ALCHEMICAL_ORE_DUST)
+                output.accept(ModItems.GOLD_ALCHEMICAL_ORE_DUST)
+                output.accept(ModItems.COPPER_ALCHEMICAL_ORE_DUST)
+                output.accept(ModItems.TIN_ALCHEMICAL_ORE_DUST)
+                output.accept(ModItems.SILVER_ALCHEMICAL_ORE_DUST)
+                output.accept(ModItems.ZINC_ALCHEMICAL_ORE_DUST)
+                output.accept(ModItems.NICKEL_ALCHEMICAL_ORE_DUST)
+                output.accept(ModItems.PLATINUM_ALCHEMICAL_ORE_DUST)
+                output.accept(ModItems.ALUMINUM_ALCHEMICAL_ORE_DUST)
+                output.accept(ModItems.LEAD_ALCHEMICAL_ORE_DUST)
+                output.accept(ModItems.COBALT_ALCHEMICAL_ORE_DUST)
+                output.accept(ModItems.ARDITE_ALCHEMICAL_ORE_DUST)
+                output.accept(ModItems.OSMIUM_ALCHEMICAL_ORE_DUST)
+                output.accept(ModItems.DRACONIUM_ALCHEMICAL_ORE_DUST)
+                output.accept(ModItems.TITANIUM_ALCHEMICAL_ORE_DUST)
+                output.accept(ModItems.TUNGSTEN_ALCHEMICAL_ORE_DUST)
+                output.accept(ModItems.CHROME_ALCHEMICAL_ORE_DUST)
+                output.accept(ModItems.IRIDIUM_ALCHEMICAL_ORE_DUST)
+                output.accept(ModItems.BORON_ALCHEMICAL_ORE_DUST)
+                output.accept(ModItems.LITHIUM_ALCHEMICAL_ORE_DUST)
+                output.accept(ModItems.MAGNESIUM_ALCHEMICAL_ORE_DUST)
+                output.accept(ModItems.MITHRIL_ALCHEMICAL_ORE_DUST)
+                output.accept(ModItems.YELLORIUM_ALCHEMICAL_ORE_DUST)
+                output.accept(ModItems.URANIUM_ALCHEMICAL_ORE_DUST)
+                output.accept(ModItems.THORIUM_ALCHEMICAL_ORE_DUST)
+
+                output.accept(ModItems.PRIMUS_ALCHEMICAL_DUST)
+                output.accept(ModItems.SECUNDUS_ALCHEMICAL_DUST)
+                output.accept(ModItems.TERTIUS_ALCHEMICAL_DUST)
+                output.accept(ModItems.QUARTUS_ALCHEMICAL_DUST)
+
+                output.accept(ModItems.ALCHEMICAL_COAL)
+                output.accept(ModItems.ALCHEMICAL_GOLD_INGOT)
+                output.accept(ModItems.ALCHEMICAL_IRON_INGOT)
+                output.accept(ModItems.ALCHEMICAL_DIAMOND)
+                output.accept(ModItems.DARK_MATTER)
+                output.accept(ModItems.LIGHT_MATTER)
+                output.accept(ModItems.CRYSTAL_SHARD)
             }
             .build()
     }
 
     fun register(eventBus: IEventBus) {
-        CREATIVE_MODE_TAB.register(eventBus)
+        CREATIVE_MODE_TABS.register(eventBus)
     }
 }
