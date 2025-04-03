@@ -29,6 +29,31 @@ class ModBlockLootTableProvider(
                 ConstantValue.exactly(4F)
             )
         )
+
+        dropSelf(ModBlocks.WOODEN_CASING.get())
+        dropSelf(ModBlocks.STONE_CASING.get())
+        dropSelf(ModBlocks.BRONZE_CASING.get())
+        dropSelf(ModBlocks.IRON_CASING.get())
+        dropSelf(ModBlocks.STEEL_CASING.get())
+        dropSelf(ModBlocks.ELECTRUM_CASING.get())
+        dropSelf(ModBlocks.NETHER_BRICK_CASING.get())
+        dropSelf(ModBlocks.LEAD_CASING.get())
+        dropSelf(ModBlocks.MANYULLYN_CASING.get())
+        dropSelf(ModBlocks.SIGNALUM_CASING.get())
+        dropSelf(ModBlocks.END_STONE_CASING.get())
+        dropSelf(ModBlocks.ENDERIUM_CASING.get())
+        dropSelf(ModBlocks.DARK_MATTER_CASING.get())
+        dropSelf(ModBlocks.LIGHT_MATTER_CASING.get())
+        dropSelf(ModBlocks.OSMIUM_CASING.get())
+        dropSelf(ModBlocks.REFINED_OBSIDIAN_CASING.get())
+
+        dropSelf(ModBlocks.DARK_MATTER_BLOCK.get())
+        dropSelf(ModBlocks.LIGHT_MATTER_BLOCK.get())
+        dropSelf(ModBlocks.SILVERFISH_TELEPORTATION_DISRUPTOR.get())
+        dropSelf(ModBlocks.LIFE_INFUSER_CORE.get())
+        dropSelf(ModBlocks.END_PORTAL_CORE.get())
+        dropSelf(ModBlocks.COMBUSTION_COLLECTOR.get())
+        dropSelf(ModBlocks.SMART_COMBUSTION_CONTROLLER.get())
     }
 
     override fun getKnownBlocks(): Iterable<Block> = Iterable {

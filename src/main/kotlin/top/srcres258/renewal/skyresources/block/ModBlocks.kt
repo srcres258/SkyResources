@@ -12,11 +12,20 @@ import net.neoforged.bus.api.IEventBus
 import net.neoforged.neoforge.registries.DeferredBlock
 import net.neoforged.neoforge.registries.DeferredRegister
 import top.srcres258.renewal.skyresources.SkyResources
-import top.srcres258.renewal.skyresources.block.custom.DehydratedCactusBlock
+import top.srcres258.renewal.skyresources.block.custom.*
 import top.srcres258.renewal.skyresources.item.ModItems
+import top.srcres258.renewal.skyresources.util.MaterialType
+
+private val MACHINE_BLOCK_PROPERTIES = BlockBehaviour.Properties.of()
+    .mapColor(MapColor.STONE)
+    .requiresCorrectToolForDrops()
+    .strength(3.0F, 4.8F)
+    .sound(SoundType.METAL)
 
 object ModBlocks {
     val BLOCKS: DeferredRegister.Blocks = DeferredRegister.createBlocks(SkyResources.MOD_ID)
+
+    // ----- Basic Blocks -----
 
     val MAGMAFIED_STONE: DeferredBlock<Block> = registerBlockWithItem("magmafied_stone") {
         Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGMA_BLOCK))
@@ -99,6 +108,188 @@ object ModBlocks {
                 .strength(0.2F)
                 .sound(SoundType.SNOW)
         )
+    }
+
+    // ----- Multi-block Structure Component Blocks -----
+
+    val WOODEN_CASING: DeferredBlock<Block> = registerBlockWithItem("wooden_casing") {
+        CasingBlock(
+            MaterialType.WOOD,
+            BlockBehaviour.Properties.of()
+                .strength(1.0F)
+                .sound(SoundType.WOOD)
+                .ignitedByLava()
+                .noOcclusion()
+        )
+    }
+    val STONE_CASING: DeferredBlock<Block> = registerBlockWithItem("stone_casing") {
+        CasingBlock(
+            MaterialType.STONE,
+            BlockBehaviour.Properties.of()
+                .strength(1.0F)
+                .sound(SoundType.STONE)
+                .noOcclusion()
+        )
+    }
+    val BRONZE_CASING: DeferredBlock<Block> = registerBlockWithItem("bronze_casing") {
+        CasingBlock(
+            MaterialType.BRONZE,
+            BlockBehaviour.Properties.of()
+                .strength(1.0F)
+                .sound(SoundType.METAL)
+                .noOcclusion()
+        )
+    }
+    val IRON_CASING: DeferredBlock<Block> = registerBlockWithItem("iron_casing") {
+        CasingBlock(
+            MaterialType.IRON,
+            BlockBehaviour.Properties.of()
+                .strength(1.0F)
+                .sound(SoundType.METAL)
+                .noOcclusion()
+        )
+    }
+    val STEEL_CASING: DeferredBlock<Block> = registerBlockWithItem("steel_casing") {
+        CasingBlock(
+            MaterialType.STEEL,
+            BlockBehaviour.Properties.of()
+                .strength(1.0F)
+                .sound(SoundType.METAL)
+                .noOcclusion()
+        )
+    }
+    val ELECTRUM_CASING: DeferredBlock<Block> = registerBlockWithItem("electrum_casing") {
+        CasingBlock(
+            MaterialType.ELECTRUM,
+            BlockBehaviour.Properties.of()
+                .strength(1.0F)
+                .sound(SoundType.METAL)
+                .noOcclusion()
+        )
+    }
+    val NETHER_BRICK_CASING: DeferredBlock<Block> = registerBlockWithItem("nether_brick_casing") {
+        CasingBlock(
+            MaterialType.NETHER_BRICK,
+            BlockBehaviour.Properties.of()
+                .strength(1.0F)
+                .sound(SoundType.NETHER_BRICKS)
+                .noOcclusion()
+        )
+    }
+    val LEAD_CASING: DeferredBlock<Block> = registerBlockWithItem("lead_casing") {
+        CasingBlock(
+            MaterialType.LEAD,
+            BlockBehaviour.Properties.of()
+                .strength(1.0F)
+                .sound(SoundType.METAL)
+                .noOcclusion()
+        )
+    }
+    val MANYULLYN_CASING: DeferredBlock<Block> = registerBlockWithItem("manyullyn_casing") {
+        CasingBlock(
+            MaterialType.MANYULLYN,
+            BlockBehaviour.Properties.of()
+                .strength(1.0F)
+                .sound(SoundType.METAL)
+                .noOcclusion()
+        )
+    }
+    val SIGNALUM_CASING: DeferredBlock<Block> = registerBlockWithItem("signalum_casing") {
+        CasingBlock(
+            MaterialType.SIGNALUM,
+            BlockBehaviour.Properties.of()
+                .strength(1.0F)
+                .sound(SoundType.METAL)
+                .noOcclusion()
+        )
+    }
+    val END_STONE_CASING: DeferredBlock<Block> = registerBlockWithItem("end_stone_casing") {
+        CasingBlock(
+            MaterialType.END_STONE,
+            BlockBehaviour.Properties.of()
+                .strength(1.0F)
+                .sound(SoundType.STONE)
+                .noOcclusion()
+        )
+    }
+    val ENDERIUM_CASING: DeferredBlock<Block> = registerBlockWithItem("enderium_casing") {
+        CasingBlock(
+            MaterialType.ENDERIUM,
+            BlockBehaviour.Properties.of()
+                .strength(1.0F)
+                .sound(SoundType.METAL)
+                .noOcclusion()
+        )
+    }
+    val DARK_MATTER_CASING: DeferredBlock<Block> = registerBlockWithItem("dark_matter_casing") {
+        CasingBlock(
+            MaterialType.DARK_MATTER,
+            BlockBehaviour.Properties.of()
+                .strength(1.0F)
+                .sound(SoundType.METAL)
+                .noOcclusion()
+        )
+    }
+    val LIGHT_MATTER_CASING: DeferredBlock<Block> = registerBlockWithItem("light_matter_casing") {
+        CasingBlock(
+            MaterialType.LIGHT_MATTER,
+            BlockBehaviour.Properties.of()
+                .strength(1.0F)
+                .sound(SoundType.METAL)
+                .noOcclusion()
+        )
+    }
+    val OSMIUM_CASING: DeferredBlock<Block> = registerBlockWithItem("osmium_casing") {
+        CasingBlock(
+            MaterialType.OSMIUM,
+            BlockBehaviour.Properties.of()
+                .strength(1.0F)
+                .sound(SoundType.METAL)
+                .noOcclusion()
+        )
+    }
+    val REFINED_OBSIDIAN_CASING: DeferredBlock<Block> = registerBlockWithItem("refined_obsidian_casing") {
+        CasingBlock(
+            MaterialType.REFINED_OBSIDIAN,
+            BlockBehaviour.Properties.of()
+                .strength(1.0F)
+                .sound(SoundType.STONE)
+                .noOcclusion()
+        )
+    }
+
+    val DARK_MATTER_BLOCK: DeferredBlock<Block> = registerBlockWithItem("dark_matter_block") {
+        Block(BlockBehaviour.Properties.ofFullCopy(HARDENED_COAL_BLOCK.get()))
+    }
+    val LIGHT_MATTER_BLOCK: DeferredBlock<Block> = registerBlockWithItem("light_matter_block") {
+        Block(BlockBehaviour.Properties.ofFullCopy(HEAVY_SNOW_BLOCK.get()))
+    }
+    val SILVERFISH_TELEPORTATION_DISRUPTOR: DeferredBlock<Block> = registerBlockWithItem("silverfish_teleportation_disruptor") {
+        SilverfishTeleportationDisruptorBlock(
+            BlockBehaviour.Properties.of()
+                .strength(0.2F)
+                .sound(SoundType.WOOD)
+                .noOcclusion()
+        )
+    }
+    val LIFE_INFUSER_CORE: DeferredBlock<Block> = registerBlockWithItem("life_infuser_core") {
+        LifeInfuserCoreBlock(
+            BlockBehaviour.Properties.of()
+                .mapColor(MapColor.WOOD)
+                .instrument(NoteBlockInstrument.BASS)
+                .strength(2.0F, 3.0F)
+                .sound(SoundType.WOOD)
+                .ignitedByLava()
+        )
+    }
+    val END_PORTAL_CORE: DeferredBlock<Block> = registerBlockWithItem("end_portal_core") {
+        EndPortalCoreBlock(BlockBehaviour.Properties.ofFullCopy(DARK_MATTER_BLOCK.get()))
+    }
+    val COMBUSTION_COLLECTOR: DeferredBlock<Block> = registerBlockWithItem("combustion_collector") {
+        CombustionCollectorBlock(MACHINE_BLOCK_PROPERTIES)
+    }
+    val SMART_COMBUSTION_CONTROLLER: DeferredBlock<Block> = registerBlockWithItem("smart_combustion_controller") {
+        SmartCombustionControllerBlock(MACHINE_BLOCK_PROPERTIES)
     }
 
     private fun <T : Block> registerBlockWithItem(name: String, block: () -> T) =

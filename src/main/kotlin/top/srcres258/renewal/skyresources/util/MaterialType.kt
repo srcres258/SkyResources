@@ -1,6 +1,8 @@
 package top.srcres258.renewal.skyresources.util
 
-enum class MaterialType {
+import net.minecraft.util.StringRepresentable
+
+enum class MaterialType : StringRepresentable {
     /**
      * 木制
      */
@@ -79,5 +81,9 @@ enum class MaterialType {
     /**
      * 强化黑曜石
      */
-    REFINED_OBSIDIAN
+    REFINED_OBSIDIAN;
+
+    override fun getSerializedName(): String = name.lowercase()
+
+    override fun toString(): String = getSerializedName()
 }

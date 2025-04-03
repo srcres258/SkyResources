@@ -1,6 +1,5 @@
 package top.srcres258.renewal.skyresources.block.custom
 
-import com.mojang.serialization.MapCodec
 import net.minecraft.core.BlockPos
 import net.minecraft.core.Direction
 import net.minecraft.server.level.ServerLevel
@@ -27,7 +26,6 @@ private val OUTLINE_SHAPE: VoxelShape = Block.box(1.0, 0.0, 1.0, 15.0, 16.0, 15.
 
 class DehydratedCactusBlock(properties: Properties) : Block(properties) {
     companion object {
-        val CODEC: MapCodec<DehydratedCactusBlock> = simpleCodec(::DehydratedCactusBlock)
         val AGE: IntegerProperty = BlockStateProperties.AGE_15
         const val MAX_AGE = 15
     }
@@ -35,8 +33,6 @@ class DehydratedCactusBlock(properties: Properties) : Block(properties) {
     init {
         registerDefaultState(stateDefinition.any().setValue(AGE, 0))
     }
-
-    override fun codec(): MapCodec<out Block> = CODEC
 
     override fun tick(state: BlockState, level: ServerLevel, pos: BlockPos, random: RandomSource) {
         if (!level.isAreaLoaded(pos, 1)) {
