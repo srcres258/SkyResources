@@ -1,10 +1,10 @@
 package top.srcres258.renewal.skyresources.datagen
 
-import net.minecraft.core.Direction
 import net.minecraft.core.registries.BuiltInRegistries
 import net.minecraft.data.PackOutput
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.level.block.Block
+import net.minecraft.world.level.block.state.BlockState
 import net.minecraft.world.level.block.state.properties.DirectionProperty
 import net.neoforged.neoforge.client.model.generators.BlockModelProvider
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider
@@ -14,7 +14,10 @@ import net.neoforged.neoforge.common.data.ExistingFileHelper
 import net.neoforged.neoforge.registries.DeferredBlock
 import top.srcres258.renewal.skyresources.SkyResources
 import top.srcres258.renewal.skyresources.block.ModBlocks
+import top.srcres258.renewal.skyresources.block.custom.DirtFurnaceBlock
 import top.srcres258.renewal.skyresources.block.custom.SmartCombustionControllerBlock
+
+private const val DEFAULT_ANGLE_OFFSET = 180
 
 class ModBlockStateProvider(
     output: PackOutput,
@@ -28,7 +31,8 @@ class ModBlockStateProvider(
         blockWithItem(ModBlocks.PETRIFIED_WOOD.get())
         blockWithItem(ModBlocks.PRTIFIED_PLANKS.get())
         blockWithItem(ModBlocks.HARDENED_COAL_BLOCK.get())
-        blockWithItem(ModBlocks.DEHYDRATED_CACTUS.get(), models().getExistingFile(modLoc("block/dehydrated_cactus")))
+        blockWithItem(ModBlocks.DEHYDRATED_CACTUS.get(),
+            models().getExistingFile(modLoc("block/dehydrated_cactus")))
         blockWithItem(ModBlocks.ALCHEMICAL_COAL_BLOCK.get())
         blockWithItem(ModBlocks.HEAVY_SNOW_BLOCK.get())
 
@@ -66,6 +70,43 @@ class ModBlockStateProvider(
         )
         blockWithItem(ModBlocks.COMBUSTION_COLLECTOR.get())
         machineBlockWithItem(ModBlocks.SMART_COMBUSTION_CONTROLLER, SmartCombustionControllerBlock.FACING)
+
+        horizontalFacingBlockWithItem(
+            ModBlocks.DIRT_FURNACE.get(),
+            DirtFurnaceBlock.FACING,
+            { modLoc("block/dirt_furnace") },
+            { mcLoc("block/dirt") },
+            { state ->
+                if (state.getValue(DirtFurnaceBlock.LIT)) {
+                    "dirt_furnace_on"
+                } else {
+                    "dirt_furnace"
+                }
+            }
+        )
+        blockWithItem(ModBlocks.CRUCIBLE.get(), models().getExistingFile(modLoc("block/crucible")))
+        blockWithItem(ModBlocks.FLUID_DROPPER.get(), models().cube(
+            ModBlocks.FLUID_DROPPER.id.path,
+            mcLoc("block/dropper_front_vertical"),
+            mcLoc("block/furnace_top"),
+            mcLoc("block/furnace_side"),
+            mcLoc("block/furnace_side"),
+            mcLoc("block/furnace_side"),
+            mcLoc("block/furnace_side")
+        ).texture("particle", mcLoc("block/furnace_side")))
+        blockWithItem(ModBlocks.QUICK_DROPPER.get(), models().cube(
+            ModBlocks.QUICK_DROPPER.id.path,
+            modLoc("block/quick_dropper_bottom"),
+            modLoc("block/machine"),
+            modLoc("block/machine"),
+            modLoc("block/machine"),
+            modLoc("block/machine"),
+            modLoc("block/machine")
+        ).texture("particle", modLoc("block/machine")))
+        blockWithItem(ModBlocks.CRUCIBLE_INSERTER.get(),
+            models().getExistingFile(modLoc("block/crucible_inserter")))
+        blockWithItem(ModBlocks.LIFE_INJECTOR.get(),
+            models().getExistingFile(modLoc("block/life_injector")))
     }
 
     private fun blockWithItem(block: Block, model: ModelFile = cubeAll(block)) {
@@ -79,47 +120,50 @@ class ModBlockStateProvider(
 
     private fun horizontalFacingBlockWithItem(
         block: Block,
-        prefix: String,
         directionProperty: DirectionProperty,
-        facingTextureId: ResourceLocation,
-        otherTextureId: ResourceLocation
+        facingTextureIdFunc: (BlockState) -> ResourceLocation,
+        otherTextureIdFunc: (BlockState) -> ResourceLocation,
+        modelFileNameFunc: ((BlockState) -> String)? = null
     ) {
-        fun nameFunc(direction: Direction) = "${prefix}_${direction.getName().lowercase()}"
+        val blockPath = BuiltInRegistries.BLOCK.getKey(block).path
 
+        val modelFileNameFunc1 = if (modelFileNameFunc == null) {
+            { blockPath }
+        } else {
+            modelFileNameFunc
+        }
         getVariantBuilder(block)
             .forAllStates { state ->
                 state.getValue(directionProperty)
                     .let { direction ->
-                        generateHorizontalFacingBlockModelFile(
-                            models(),
-                            nameFunc(direction),
-                            direction,
-                            facingTextureId,
-                            otherTextureId
-                        )?.let { model -> arrayOf(ConfiguredModel(model)) } ?: arrayOf()
+                        ConfiguredModel.builder()
+                            .modelFile(generateHorizontalFacingBlockModelFile(
+                                models(),
+                                modelFileNameFunc1(state),
+                                facingTextureIdFunc(state),
+                                otherTextureIdFunc(state)
+                            ))
+                            .rotationY((direction.toYRot().toInt() + DEFAULT_ANGLE_OFFSET) % 360)
+                            .build()
                     }
             }
 
-        val itemDirection = Direction.NORTH
-        simpleBlockItem(block, generateHorizontalFacingBlockModelFile(models(), nameFunc(itemDirection),
-            itemDirection, facingTextureId, otherTextureId)!!)
-    }
-
-    private fun horizontalFacingBlockWithItem(
-        block: DeferredBlock<out Block>,
-        directionProperty: DirectionProperty,
-        facingTextureId: ResourceLocation,
-        otherTextureId: ResourceLocation
-    ) {
-        horizontalFacingBlockWithItem(block.get(), block.id.path, directionProperty, facingTextureId, otherTextureId)
+        val defaultBlockState = block.defaultBlockState()
+        val defaultModelFile = generateHorizontalFacingBlockModelFile(
+            models(),
+            modelFileNameFunc1(defaultBlockState),
+            facingTextureIdFunc(defaultBlockState),
+            otherTextureIdFunc(defaultBlockState)
+        )
+        simpleBlockItem(block, defaultModelFile)
     }
 
     private fun machineBlockWithItem(block: DeferredBlock<out Block>, directionProperty: DirectionProperty) {
         horizontalFacingBlockWithItem(
-            block,
+            block.get(),
             directionProperty,
-            modLoc("block/${block.id.path}"),
-            modLoc("block/machine")
+            { modLoc("block/${block.id.path}") },
+            { modLoc("block/machine") }
         )
     }
 }
@@ -127,25 +171,7 @@ class ModBlockStateProvider(
 private fun generateHorizontalFacingBlockModelFile(
     modelProvider: BlockModelProvider,
     name: String,
-    direction: Direction,
     facingTextureId: ResourceLocation,
     otherTextureId: ResourceLocation
-): ModelFile? = when (direction) {
-    Direction.NORTH -> modelProvider.cube(
-        name, otherTextureId, otherTextureId,
-        facingTextureId, otherTextureId, otherTextureId, otherTextureId
-    )
-    Direction.SOUTH -> modelProvider.cube(
-        name, otherTextureId, otherTextureId,
-        otherTextureId, facingTextureId, otherTextureId, otherTextureId
-    )
-    Direction.EAST -> modelProvider.cube(
-        name, otherTextureId, otherTextureId,
-        otherTextureId, otherTextureId, facingTextureId, otherTextureId
-    )
-    Direction.WEST -> modelProvider.cube(
-        name, otherTextureId, otherTextureId,
-        otherTextureId, otherTextureId, otherTextureId, facingTextureId
-    )
-    else -> null
-}?.texture("particle", otherTextureId)
+) = modelProvider.orientable(name, otherTextureId, facingTextureId, otherTextureId)
+    .texture("particle", otherTextureId)

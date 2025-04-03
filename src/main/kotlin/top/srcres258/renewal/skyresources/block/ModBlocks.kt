@@ -280,6 +280,7 @@ object ModBlocks {
                 .strength(2.0F, 3.0F)
                 .sound(SoundType.WOOD)
                 .ignitedByLava()
+                .noOcclusion()
         )
     }
     val END_PORTAL_CORE: DeferredBlock<Block> = registerBlockWithItem("end_portal_core") {
@@ -290,6 +291,45 @@ object ModBlocks {
     }
     val SMART_COMBUSTION_CONTROLLER: DeferredBlock<Block> = registerBlockWithItem("smart_combustion_controller") {
         SmartCombustionControllerBlock(MACHINE_BLOCK_PROPERTIES)
+    }
+
+    // ----- Basic Device Blocks -----
+
+    val DIRT_FURNACE: DeferredBlock<Block> = registerBlockWithItem("dirt_furnace") {
+        DirtFurnaceBlock(
+            BlockBehaviour.Properties.of()
+                .mapColor(MapColor.DIRT)
+                .strength(0.5F)
+                .sound(SoundType.GRAVEL)
+        )
+    }
+    val CRUCIBLE: DeferredBlock<Block> = registerBlockWithItem("crucible") {
+        CrucibleBlock(
+            BlockBehaviour.Properties.of()
+                .mapColor(MapColor.COLOR_RED)
+                .instrument(NoteBlockInstrument.BASEDRUM)
+                .requiresCorrectToolForDrops()
+                .strength(2.0F, 6.0F)
+                .noOcclusion()
+        )
+    }
+    val FLUID_DROPPER: DeferredBlock<Block> = registerBlockWithItem("fluid_dropper") {
+        FluidDropperBlock(
+            BlockBehaviour.Properties.of()
+                .mapColor(MapColor.STONE)
+                .instrument(NoteBlockInstrument.BASEDRUM)
+                .requiresCorrectToolForDrops()
+                .strength(3.5F)
+        )
+    }
+    val QUICK_DROPPER: DeferredBlock<Block> = registerBlockWithItem("quick_dropper") {
+        QuickDropperBlock(MACHINE_BLOCK_PROPERTIES)
+    }
+    val CRUCIBLE_INSERTER: DeferredBlock<Block> = registerBlockWithItem("crucible_inserter") {
+        CrucibleInserterBlock(MACHINE_BLOCK_PROPERTIES.noOcclusion())
+    }
+    val LIFE_INJECTOR: DeferredBlock<Block> = registerBlockWithItem("life_injector") {
+        LifeInjectorBlock(BlockBehaviour.Properties.ofFullCopy(LIFE_INFUSER_CORE.get()))
     }
 
     private fun <T : Block> registerBlockWithItem(name: String, block: () -> T) =

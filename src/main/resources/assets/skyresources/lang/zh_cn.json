@@ -35,6 +35,13 @@
     "block.skyresources.combustion_collector": "氧化产物收集器",
     "block.skyresources.smart_combustion_controller": "智能氧化控制器",
 
+    "block.skyresources.dirt_furnace": "泥炉",
+    "block.skyresources.crucible": "坩埚",
+    "block.skyresources.fluid_dropper": "漏液器",
+    "block.skyresources.quick_dropper": "快速漏斗",
+    "block.skyresources.crucible_inserter": "坩埚投料器",
+    "block.skyresources.life_injector": "生命汲取器",
+
     "item.skyresources.plant_matter": "自然物质",
     "item.skyresources.enriched_bone_meal": "强化骨粉",
     "item.skyresources.heavy_snowball": "重型雪球",

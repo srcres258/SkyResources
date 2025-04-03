@@ -54,6 +54,13 @@ class ModBlockLootTableProvider(
         dropSelf(ModBlocks.END_PORTAL_CORE.get())
         dropSelf(ModBlocks.COMBUSTION_COLLECTOR.get())
         dropSelf(ModBlocks.SMART_COMBUSTION_CONTROLLER.get())
+
+        dropSelf(ModBlocks.DIRT_FURNACE.get())
+        dropSelf(ModBlocks.CRUCIBLE.get())
+        dropSelf(ModBlocks.FLUID_DROPPER.get())
+        dropSelf(ModBlocks.QUICK_DROPPER.get())
+        dropSelf(ModBlocks.CRUCIBLE_INSERTER.get())
+        dropSelf(ModBlocks.LIFE_INJECTOR.get())
     }
 
     override fun getKnownBlocks(): Iterable<Block> = Iterable {

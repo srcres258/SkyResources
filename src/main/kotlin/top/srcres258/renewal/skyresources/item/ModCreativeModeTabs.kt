@@ -55,6 +55,13 @@ object ModCreativeModeTabs {
                 output.accept(ModBlocks.COMBUSTION_COLLECTOR)
                 output.accept(ModBlocks.SMART_COMBUSTION_CONTROLLER)
 
+                output.accept(ModBlocks.DIRT_FURNACE)
+                output.accept(ModBlocks.CRUCIBLE)
+                output.accept(ModBlocks.FLUID_DROPPER)
+                output.accept(ModBlocks.QUICK_DROPPER)
+                output.accept(ModBlocks.CRUCIBLE_INSERTER)
+                output.accept(ModBlocks.LIFE_INJECTOR)
+
                 output.accept(ModItems.PLANT_MATTER)
                 output.accept(ModItems.ENRICHED_BONE_MEAL)
                 output.accept(ModItems.HEAVY_SNOWBALL)
