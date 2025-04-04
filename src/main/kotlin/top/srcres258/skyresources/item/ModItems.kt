@@ -825,6 +825,202 @@ object ModItems {
         )
     }
 
+    // ----- Crafting Device Items -----
+
+    val WOODEN_CONDENSER: DeferredItem<Item> = registerItem("wooden_condenser") {
+        CondenserItem(
+            MaterialType.WOOD,
+            Item.Properties()
+        )
+    }
+    val STONE_CONDENSER: DeferredItem<Item> = registerItem("stone_condenser") {
+        CondenserItem(
+            MaterialType.STONE,
+            Item.Properties()
+        )
+    }
+    val BRONZE_CONDENSER: DeferredItem<Item> = registerItem("bronze_condenser") {
+        CondenserItem(
+            MaterialType.BRONZE,
+            Item.Properties()
+        )
+    }
+    val IRON_CONDENSER: DeferredItem<Item> = registerItem("iron_condenser") {
+        CondenserItem(
+            MaterialType.IRON,
+            Item.Properties()
+        )
+    }
+    val STEEL_CONDENSER: DeferredItem<Item> = registerItem("steel_condenser") {
+        CondenserItem(
+            MaterialType.STEEL,
+            Item.Properties()
+        )
+    }
+    val ELECTRUM_CONDENSER: DeferredItem<Item> = registerItem("electrum_condenser") {
+        CondenserItem(
+            MaterialType.ELECTRUM,
+            Item.Properties()
+        )
+    }
+    val NETHER_BRICK_CONDENSER: DeferredItem<Item> = registerItem("nether_brick_condenser") {
+        CondenserItem(
+            MaterialType.NETHER_BRICK,
+            Item.Properties()
+        )
+    }
+    val LEAD_CONDENSER: DeferredItem<Item> = registerItem("lead_condenser") {
+        CondenserItem(
+            MaterialType.LEAD,
+            Item.Properties()
+        )
+    }
+    val MANYULLYN_CONDENSER: DeferredItem<Item> = registerItem("manyullyn_condenser") {
+        CondenserItem(
+            MaterialType.MANYULLYN,
+            Item.Properties()
+        )
+    }
+    val SIGNALUM_CONDENSER: DeferredItem<Item> = registerItem("signalum_condenser") {
+        CondenserItem(
+            MaterialType.SIGNALUM,
+            Item.Properties()
+        )
+    }
+    val END_STONE_CONDENSER: DeferredItem<Item> = registerItem("end_stone_condenser") {
+        CondenserItem(
+            MaterialType.END_STONE,
+            Item.Properties()
+        )
+    }
+    val ENDERIUM_CONDENSER: DeferredItem<Item> = registerItem("enderium_condenser") {
+        CondenserItem(
+            MaterialType.ENDERIUM,
+            Item.Properties()
+        )
+    }
+    val DARK_MATTER_CONDENSER: DeferredItem<Item> = registerItem("dark_matter_condenser") {
+        CondenserItem(
+            MaterialType.DARK_MATTER,
+            Item.Properties()
+        )
+    }
+    val LIGHT_MATTER_CONDENSER: DeferredItem<Item> = registerItem("light_matter_condenser") {
+        CondenserItem(
+            MaterialType.LIGHT_MATTER,
+            Item.Properties()
+        )
+    }
+    val OSMIUM_CONDENSER: DeferredItem<Item> = registerItem("osmium_condenser") {
+        CondenserItem(
+            MaterialType.OSMIUM,
+            Item.Properties()
+        )
+    }
+    val REFINED_OBSIDIAN_CONDENSER: DeferredItem<Item> = registerItem("refined_obsidian_condenser") {
+        CondenserItem(
+            MaterialType.REFINED_OBSIDIAN,
+            Item.Properties()
+        )
+    }
+
+    val WOODEN_COMBUSTION_HEATER: DeferredItem<Item> = registerItem("wooden_combustion_heater") {
+        CombustionHeaterItem(
+            MaterialType.WOOD,
+            Item.Properties()
+        )
+    }
+    val STONE_COMBUSTION_HEATER: DeferredItem<Item> = registerItem("stone_combustion_heater") {
+        CombustionHeaterItem(
+            MaterialType.STONE,
+            Item.Properties()
+        )
+    }
+    val BRONZE_COMBUSTION_HEATER: DeferredItem<Item> = registerItem("bronze_combustion_heater") {
+        CombustionHeaterItem(
+            MaterialType.BRONZE,
+            Item.Properties()
+        )
+    }
+    val IRON_COMBUSTION_HEATER: DeferredItem<Item> = registerItem("iron_combustion_heater") {
+        CombustionHeaterItem(
+            MaterialType.IRON,
+            Item.Properties()
+        )
+    }
+    val STEEL_COMBUSTION_HEATER: DeferredItem<Item> = registerItem("steel_combustion_heater") {
+        CombustionHeaterItem(
+            MaterialType.STEEL,
+            Item.Properties()
+        )
+    }
+    val ELECTRUM_COMBUSTION_HEATER: DeferredItem<Item> = registerItem("electrum_combustion_heater") {
+        CombustionHeaterItem(
+            MaterialType.WOOD,
+            Item.Properties()
+        )
+    }
+    val NETHER_BRICK_COMBUSTION_HEATER: DeferredItem<Item> = registerItem("nether_brick_combustion_heater") {
+        CombustionHeaterItem(
+            MaterialType.NETHER_BRICK,
+            Item.Properties()
+        )
+    }
+    val LEAD_COMBUSTION_HEATER: DeferredItem<Item> = registerItem("lead_combustion_heater") {
+        CombustionHeaterItem(
+            MaterialType.LEAD,
+            Item.Properties()
+        )
+    }
+    val MANYULLYN_COMBUSTION_HEATER: DeferredItem<Item> = registerItem("manyullyn_combustion_heater") {
+        CombustionHeaterItem(
+            MaterialType.MANYULLYN,
+            Item.Properties()
+        )
+    }
+    val SIGNALUM_COMBUSTION_HEATER: DeferredItem<Item> = registerItem("signalum_combustion_heater") {
+        CombustionHeaterItem(
+            MaterialType.SIGNALUM,
+            Item.Properties()
+        )
+    }
+    val END_STONE_COMBUSTION_HEATER: DeferredItem<Item> = registerItem("end_stone_combustion_heater") {
+        CombustionHeaterItem(
+            MaterialType.END_STONE,
+            Item.Properties()
+        )
+    }
+    val ENDERIUM_COMBUSTION_HEATER: DeferredItem<Item> = registerItem("enderium_combustion_heater") {
+        CombustionHeaterItem(
+            MaterialType.ENDERIUM,
+            Item.Properties()
+        )
+    }
+    val DARK_MATTER_COMBUSTION_HEATER: DeferredItem<Item> = registerItem("dark_matter_combustion_heater") {
+        CombustionHeaterItem(
+            MaterialType.DARK_MATTER,
+            Item.Properties()
+        )
+    }
+    val LIGHT_MATTER_COMBUSTION_HEATER: DeferredItem<Item> = registerItem("light_matter_combustion_heater") {
+        CombustionHeaterItem(
+            MaterialType.LIGHT_MATTER,
+            Item.Properties()
+        )
+    }
+    val OSMIUM_COMBUSTION_HEATER: DeferredItem<Item> = registerItem("osmium_combustion_heater") {
+        CombustionHeaterItem(
+            MaterialType.OSMIUM,
+            Item.Properties()
+        )
+    }
+    val REFINED_OBSIDIAN_COMBUSTION_HEATER: DeferredItem<Item> = registerItem("refined_obsidian_combustion_heater") {
+        CombustionHeaterItem(
+            MaterialType.REFINED_OBSIDIAN,
+            Item.Properties()
+        )
+    }
+
     private fun <T : Item> registerItem(name: String, item: () -> T) = ITEMS.register(name) { -> item() }
 
     fun register(eventBus: IEventBus) {
