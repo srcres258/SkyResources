@@ -726,6 +726,105 @@ object ModItems {
         Item(Item.Properties())
     }
 
+    // ----- Energy-consuming Device Items -----
+
+    val WOODEN_HEAT_PROVIDER: DeferredItem<Item> = registerItem("wooden_heat_provider") {
+        HeatProviderItem(
+            MaterialType.WOOD,
+            Item.Properties()
+        )
+    }
+    val STONE_HEAT_PROVIDER: DeferredItem<Item> = registerItem("stone_heat_provider") {
+        HeatProviderItem(
+            MaterialType.STONE,
+            Item.Properties()
+        )
+    }
+    val BRONZE_HEAT_PROVIDER: DeferredItem<Item> = registerItem("bronze_heat_provider") {
+        HeatProviderItem(
+            MaterialType.BRONZE,
+            Item.Properties()
+        )
+    }
+    val IRON_HEAT_PROVIDER: DeferredItem<Item> = registerItem("iron_heat_provider") {
+        HeatProviderItem(
+            MaterialType.IRON,
+            Item.Properties()
+        )
+    }
+    val STEEL_HEAT_PROVIDER: DeferredItem<Item> = registerItem("steel_heat_provider") {
+        HeatProviderItem(
+            MaterialType.STEEL,
+            Item.Properties()
+        )
+    }
+    val ELECTRUM_HEAT_PROVIDER: DeferredItem<Item> = registerItem("electrum_heat_provider") {
+        HeatProviderItem(
+            MaterialType.ELECTRUM,
+            Item.Properties()
+        )
+    }
+    val NETHER_BRICK_HEAT_PROVIDER: DeferredItem<Item> = registerItem("nether_brick_heat_provider") {
+        HeatProviderItem(
+            MaterialType.NETHER_BRICK,
+            Item.Properties()
+        )
+    }
+    val LEAD_HEAT_PROVIDER: DeferredItem<Item> = registerItem("lead_heat_provider") {
+        HeatProviderItem(
+            MaterialType.LEAD,
+            Item.Properties()
+        )
+    }
+    val MANYULLYN_HEAT_PROVIDER: DeferredItem<Item> = registerItem("manyullyn_heat_provider") {
+        HeatProviderItem(
+            MaterialType.MANYULLYN,
+            Item.Properties()
+        )
+    }
+    val SIGNALUM_HEAT_PROVIDER: DeferredItem<Item> = registerItem("signalum_heat_provider") {
+        HeatProviderItem(
+            MaterialType.SIGNALUM,
+            Item.Properties()
+        )
+    }
+    val END_STONE_HEAT_PROVIDER: DeferredItem<Item> = registerItem("end_stone_heat_provider") {
+        HeatProviderItem(
+            MaterialType.END_STONE,
+            Item.Properties()
+        )
+    }
+    val ENDERIUM_HEAT_PROVIDER: DeferredItem<Item> = registerItem("enderium_heat_provider") {
+        HeatProviderItem(
+            MaterialType.ENDERIUM,
+            Item.Properties()
+        )
+    }
+    val DARK_MATTER_HEAT_PROVIDER: DeferredItem<Item> = registerItem("dark_matter_heat_provider") {
+        HeatProviderItem(
+            MaterialType.DARK_MATTER,
+            Item.Properties()
+        )
+    }
+    val LIGHT_MATTER_HEAT_PROVIDER: DeferredItem<Item> = registerItem("light_matter_heat_provider") {
+        HeatProviderItem(
+            MaterialType.LIGHT_MATTER,
+            Item.Properties()
+        )
+    }
+    val OSMIUM_HEAT_PROVIDER: DeferredItem<Item> = registerItem("osmium_heat_provider") {
+        HeatProviderItem(
+            MaterialType.OSMIUM,
+            Item.Properties()
+        )
+    }
+    val REFINED_OBSIDIAN_HEAT_PROVIDER: DeferredItem<Item> = registerItem("refined_obsidian_heat_provider") {
+        HeatProviderItem(
+            MaterialType.REFINED_OBSIDIAN,
+            Item.Properties()
+        )
+    }
+
     private fun <T : Item> registerItem(name: String, item: () -> T) = ITEMS.register(name) { -> item() }
 
     fun register(eventBus: IEventBus) {

@@ -191,5 +191,22 @@
     "item.skyresources.light_matter": "Light Matter",
     "item.skyresources.crystal_shard": "Crystal Shard",
 
+    "item.skyresources.wooden_heat_provider": "Wooden Heat Provider",
+    "item.skyresources.stone_heat_provider": "Stone Heat Provider",
+    "item.skyresources.bronze_heat_provider": "Bronze Heat Provider",
+    "item.skyresources.iron_heat_provider": "Iron Heat Provider",
+    "item.skyresources.steel_heat_provider": "Steel Heat Provider",
+    "item.skyresources.electrum_heat_provider": "Electrum Heat Provider",
+    "item.skyresources.nether_brick_heat_provider": "Nether Brick Heat Provider",
+    "item.skyresources.lead_heat_provider": "Lead Heat Provider",
+    "item.skyresources.manyullyn_heat_provider": "Manyullyn Heat Provider",
+    "item.skyresources.signalum_heat_provider": "Signalum Heat Provider",
+    "item.skyresources.end_stone_heat_provider": "End Stone Heat Provider",
+    "item.skyresources.enderium_heat_provider": "Enderium Heat Provider",
+    "item.skyresources.dark_matter_heat_provider": "Dark Matter Heat Provider",
+    "item.skyresources.light_matter_heat_provider": "Light Matter Heat Provider",
+    "item.skyresources.osmium_heat_provider": "Osmium Heat Provider",
+    "item.skyresources.refined_obsidian_heat_provider": "Refined Obsidian Heat Provider",
+
     "creativetab.skyresources.sky_resources_tab": "Sky Resources"
 }

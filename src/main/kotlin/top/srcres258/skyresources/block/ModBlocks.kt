@@ -332,7 +332,7 @@ object ModBlocks {
         LifeInjectorBlock(BlockBehaviour.Properties.ofFullCopy(LIFE_INFUSER_CORE.get()))
     }
 
-    // Energy-consuming Device Blocks
+    // ----- Energy-consuming Device Blocks -----
 
     val ROCK_CRUSHER: DeferredBlock<Block> = registerBlockWithItem("rock_crusher") {
         RockCrusherBlock(MACHINE_BLOCK_PROPERTIES)
@@ -362,7 +362,7 @@ object ModBlocks {
         )
     }
 
-    // Crafting Device Blocks
+    // ----- Crafting Device Blocks -----
 
     val ALCHEMICAL_FUSION_TABLE: DeferredBlock<Block> = registerBlockWithItem("alchemical_fusion_table") {
         AlchemicalFusionTableBlock(

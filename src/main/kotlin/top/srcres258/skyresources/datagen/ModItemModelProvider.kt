@@ -1,8 +1,12 @@
 package top.srcres258.skyresources.datagen
 
 import net.minecraft.data.PackOutput
+import net.minecraft.resources.ResourceLocation
+import net.minecraft.world.item.Item
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider
+import net.neoforged.neoforge.client.model.generators.ModelFile
 import net.neoforged.neoforge.common.data.ExistingFileHelper
+import net.neoforged.neoforge.registries.DeferredItem
 import top.srcres258.skyresources.SkyResources
 import top.srcres258.skyresources.item.ModItems
 
@@ -147,5 +151,104 @@ class ModItemModelProvider(
         basicItem(ModItems.DARK_MATTER.get())
         basicItem(ModItems.LIGHT_MATTER.get())
         basicItem(ModItems.CRYSTAL_SHARD.get())
+
+        machinePartTopItem(
+            ModItems.WOODEN_HEAT_PROVIDER,
+            modLoc("block/heat_provider"),
+            mcLoc("block/oak_log")
+        )
+        machinePartTopItem(
+            ModItems.STONE_HEAT_PROVIDER,
+            modLoc("block/heat_provider"),
+            mcLoc("block/stone")
+        )
+        machinePartTopItem(
+            ModItems.BRONZE_HEAT_PROVIDER,
+            modLoc("block/heat_provider"),
+            modLoc("block/bronze_machine")
+        )
+        machinePartTopItem(
+            ModItems.IRON_HEAT_PROVIDER,
+            modLoc("block/heat_provider"),
+            modLoc("block/machine")
+        )
+        machinePartTopItem(
+            ModItems.STEEL_HEAT_PROVIDER,
+            modLoc("block/heat_provider"),
+            modLoc("block/steel_machine")
+        )
+        machinePartTopItem(
+            ModItems.ELECTRUM_HEAT_PROVIDER,
+            modLoc("block/heat_provider"),
+            modLoc("block/electrum_machine")
+        )
+        machinePartTopItem(
+            ModItems.NETHER_BRICK_HEAT_PROVIDER,
+            modLoc("block/heat_provider"),
+            mcLoc("block/nether_bricks")
+        )
+        machinePartTopItem(
+            ModItems.LEAD_HEAT_PROVIDER,
+            modLoc("block/heat_provider"),
+            modLoc("block/lead_machine")
+        )
+        machinePartTopItem(
+            ModItems.MANYULLYN_HEAT_PROVIDER,
+            modLoc("block/heat_provider"),
+            modLoc("block/manyullyn_machine")
+        )
+        machinePartTopItem(
+            ModItems.SIGNALUM_HEAT_PROVIDER,
+            modLoc("block/heat_provider"),
+            modLoc("block/signalum_machine")
+        )
+        machinePartTopItem(
+            ModItems.END_STONE_HEAT_PROVIDER,
+            modLoc("block/heat_provider"),
+            mcLoc("block/end_stone")
+        )
+        machinePartTopItem(
+            ModItems.ENDERIUM_HEAT_PROVIDER,
+            modLoc("block/heat_provider"),
+            modLoc("block/enderium_machine")
+        )
+        machinePartTopItem(
+            ModItems.DARK_MATTER_HEAT_PROVIDER,
+            modLoc("block/heat_provider"),
+            modLoc("block/dark_matter_block")
+        )
+        machinePartTopItem(
+            ModItems.LIGHT_MATTER_HEAT_PROVIDER,
+            modLoc("block/heat_provider"),
+            modLoc("block/light_matter_block")
+        )
+        machinePartTopItem(
+            ModItems.OSMIUM_HEAT_PROVIDER,
+            modLoc("block/heat_provider"),
+            modLoc("block/osmium_machine")
+        )
+        machinePartTopItem(
+            ModItems.REFINED_OBSIDIAN_HEAT_PROVIDER,
+            modLoc("block/heat_provider"),
+            modLoc("block/refined_obsidian_machine")
+        )
     }
+
+    private fun machinePartTopItem(
+        item: DeferredItem<out Item>,
+        partTextureId: ResourceLocation? = null,
+        allTextureId: ResourceLocation? = null
+    ) =
+        getBuilder(item.id.toString())
+            .parent(ModelFile.ExistingModelFile(modLoc("block/machine_part_top"), existingFileHelper))
+            .also { builder ->
+                if (partTextureId != null) {
+                    builder.texture("part", partTextureId)
+                }
+            }
+            .also { builder ->
+                if (allTextureId != null) {
+                    builder.texture("all", allTextureId)
+                }
+            }
 }

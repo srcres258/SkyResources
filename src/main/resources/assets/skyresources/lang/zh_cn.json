@@ -191,5 +191,22 @@
     "item.skyresources.light_matter": "亮物质",
     "item.skyresources.crystal_shard": "水晶碎片",
 
+    "item.skyresources.wooden_heat_provider": "木制热量供应器",
+    "item.skyresources.stone_heat_provider": "石制热量供应器",
+    "item.skyresources.bronze_heat_provider": "青铜热量供应器",
+    "item.skyresources.iron_heat_provider": "铁制热量供应器",
+    "item.skyresources.steel_heat_provider": "钢制热量供应器",
+    "item.skyresources.electrum_heat_provider": "琥珀金热量供应器",
+    "item.skyresources.nether_brick_heat_provider": "地狱砖热量供应器",
+    "item.skyresources.lead_heat_provider": "铅制热量供应器",
+    "item.skyresources.manyullyn_heat_provider": "玛玉灵热量供应器",
+    "item.skyresources.signalum_heat_provider": "信素热量供应器",
+    "item.skyresources.end_stone_heat_provider": "末地石热量供应器",
+    "item.skyresources.enderium_heat_provider": "末影热量供应器",
+    "item.skyresources.dark_matter_heat_provider": "暗物质热量供应器",
+    "item.skyresources.light_matter_heat_provider": "亮物质热量供应器",
+    "item.skyresources.osmium_heat_provider": "锇制热量供应器",
+    "item.skyresources.refined_obsidian_heat_provider": "强化黑曜石热量供应器",
+
     "creativetab.skyresources.sky_resources_tab": "空岛资源"
 }

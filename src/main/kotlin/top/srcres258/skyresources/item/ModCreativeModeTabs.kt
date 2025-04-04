@@ -210,6 +210,23 @@ object ModCreativeModeTabs {
                 output.accept(ModItems.DARK_MATTER)
                 output.accept(ModItems.LIGHT_MATTER)
                 output.accept(ModItems.CRYSTAL_SHARD)
+
+                output.accept(ModItems.WOODEN_HEAT_PROVIDER)
+                output.accept(ModItems.STONE_HEAT_PROVIDER)
+                output.accept(ModItems.BRONZE_HEAT_PROVIDER)
+                output.accept(ModItems.IRON_HEAT_PROVIDER)
+                output.accept(ModItems.STEEL_HEAT_PROVIDER)
+                output.accept(ModItems.ELECTRUM_HEAT_PROVIDER)
+                output.accept(ModItems.NETHER_BRICK_HEAT_PROVIDER)
+                output.accept(ModItems.LEAD_HEAT_PROVIDER)
+                output.accept(ModItems.MANYULLYN_HEAT_PROVIDER)
+                output.accept(ModItems.SIGNALUM_HEAT_PROVIDER)
+                output.accept(ModItems.END_STONE_HEAT_PROVIDER)
+                output.accept(ModItems.ENDERIUM_HEAT_PROVIDER)
+                output.accept(ModItems.DARK_MATTER_HEAT_PROVIDER)
+                output.accept(ModItems.LIGHT_MATTER_HEAT_PROVIDER)
+                output.accept(ModItems.OSMIUM_HEAT_PROVIDER)
+                output.accept(ModItems.REFINED_OBSIDIAN_HEAT_PROVIDER)
             }
             .build()
     }
