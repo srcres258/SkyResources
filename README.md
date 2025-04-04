@@ -1,3 +1,3 @@
-# SkyResourcesRenewal
+# SkyResources
 
-The mod where all materials come from alchemy and technology in the sky, renewed by src_resources.
+The mod where all materials come from alchemy and technology in the sky.
