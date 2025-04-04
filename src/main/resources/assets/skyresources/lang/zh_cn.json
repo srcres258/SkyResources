@@ -42,6 +42,13 @@
     "block.skyresources.crucible_inserter": "坩埚投料器",
     "block.skyresources.life_injector": "生命汲取器",
 
+    "block.skyresources.rock_crusher": "碎石机",
+    "block.skyresources.rock_cleaner": "洗矿机",
+    "block.skyresources.aqueous_concentrator": "自动注水器",
+    "block.skyresources.aqueous_deconcentrator": "自动抽水器",
+    "block.skyresources.wildlife_attractor": "野生动物吸引装置",
+    "block.skyresources.dark_matter_transformer": "暗物质生物转化装置",
+
     "item.skyresources.plant_matter": "自然物质",
     "item.skyresources.enriched_bone_meal": "强化骨粉",
     "item.skyresources.heavy_snowball": "重型雪球",

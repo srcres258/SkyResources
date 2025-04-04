@@ -14,8 +14,7 @@ import net.neoforged.neoforge.common.data.ExistingFileHelper
 import net.neoforged.neoforge.registries.DeferredBlock
 import top.srcres258.renewal.skyresources.SkyResources
 import top.srcres258.renewal.skyresources.block.ModBlocks
-import top.srcres258.renewal.skyresources.block.custom.DirtFurnaceBlock
-import top.srcres258.renewal.skyresources.block.custom.SmartCombustionControllerBlock
+import top.srcres258.renewal.skyresources.block.custom.*
 
 private const val DEFAULT_ANGLE_OFFSET = 180
 
@@ -107,6 +106,21 @@ class ModBlockStateProvider(
             models().getExistingFile(modLoc("block/crucible_inserter")))
         blockWithItem(ModBlocks.LIFE_INJECTOR.get(),
             models().getExistingFile(modLoc("block/life_injector")))
+
+        machineBlockWithItem(ModBlocks.ROCK_CRUSHER, RockCrusherBlock.FACING)
+        machineBlockWithItem(ModBlocks.ROCK_CLEANER, RockCleanerBlock.FACING)
+        machineBlockWithItem(ModBlocks.AQUEOUS_CONCENTRATOR, AqueousConcentratorBlock.FACING)
+        machineBlockWithItem(ModBlocks.AQUEOUS_DECONCENTRATOR, AqueousDeconcentratorBlock.FACING)
+        blockWithItem(ModBlocks.WILDLIFE_ATTRACTOR.get(), models().cube(
+            ModBlocks.WILDLIFE_ATTRACTOR.id.path,
+            modLoc("block/wildlife_attractor_top"),
+            modLoc("block/wildlife_attractor_top"),
+            modLoc("block/wildlife_attractor_side"),
+            modLoc("block/wildlife_attractor_side"),
+            modLoc("block/wildlife_attractor_side"),
+            modLoc("block/wildlife_attractor_side")
+        ).texture("particle", modLoc("block/wildlife_attractor_side")))
+        blockWithItem(ModBlocks.DARK_MATTER_TRANSFORMER.get())
     }
 
     private fun blockWithItem(block: Block, model: ModelFile = cubeAll(block)) {

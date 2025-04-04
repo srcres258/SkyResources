@@ -332,6 +332,37 @@ object ModBlocks {
         LifeInjectorBlock(BlockBehaviour.Properties.ofFullCopy(LIFE_INFUSER_CORE.get()))
     }
 
+    // Energy-consuming Device Blocks
+
+    val ROCK_CRUSHER: DeferredBlock<Block> = registerBlockWithItem("rock_crusher") {
+        RockCrusherBlock(MACHINE_BLOCK_PROPERTIES)
+    }
+    val ROCK_CLEANER: DeferredBlock<Block> = registerBlockWithItem("rock_cleaner") {
+        RockCleanerBlock(MACHINE_BLOCK_PROPERTIES)
+    }
+    val AQUEOUS_CONCENTRATOR: DeferredBlock<Block> = registerBlockWithItem("aqueous_concentrator") {
+        AqueousConcentratorBlock(MACHINE_BLOCK_PROPERTIES)
+    }
+    val AQUEOUS_DECONCENTRATOR: DeferredBlock<Block> = registerBlockWithItem("aqueous_deconcentrator") {
+        AqueousDeconcentratorBlock(MACHINE_BLOCK_PROPERTIES)
+    }
+    val WILDLIFE_ATTRACTOR: DeferredBlock<Block> = registerBlockWithItem("wildlife_attractor") {
+        WildlifeAttractorBlock(
+            BlockBehaviour.Properties.of()
+                .mapColor(MapColor.COLOR_YELLOW)
+                .instrument(NoteBlockInstrument.BANJO)
+                .strength(0.5F)
+                .sound(SoundType.GRASS)
+        )
+    }
+    val DARK_MATTER_TRANSFORMER: DeferredBlock<Block> = registerBlockWithItem("dark_matter_transformer") {
+        DarkMatterTransformerBlock(
+            MACHINE_BLOCK_PROPERTIES.mapColor(MapColor.COLOR_BLACK)
+                .instrument(NoteBlockInstrument.BASEDRUM)
+        )
+    }
+
+
     private fun <T : Block> registerBlockWithItem(name: String, block: () -> T) =
         BLOCKS.register(name, block).also { deferredBlock ->
             registerBlockItem(name, deferredBlock)

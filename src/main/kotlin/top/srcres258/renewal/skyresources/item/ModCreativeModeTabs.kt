@@ -62,6 +62,13 @@ object ModCreativeModeTabs {
                 output.accept(ModBlocks.CRUCIBLE_INSERTER)
                 output.accept(ModBlocks.LIFE_INJECTOR)
 
+                output.accept(ModBlocks.ROCK_CRUSHER)
+                output.accept(ModBlocks.ROCK_CLEANER)
+                output.accept(ModBlocks.AQUEOUS_CONCENTRATOR)
+                output.accept(ModBlocks.AQUEOUS_DECONCENTRATOR)
+                output.accept(ModBlocks.WILDLIFE_ATTRACTOR)
+                output.accept(ModBlocks.DARK_MATTER_TRANSFORMER)
+
                 output.accept(ModItems.PLANT_MATTER)
                 output.accept(ModItems.ENRICHED_BONE_MEAL)
                 output.accept(ModItems.HEAVY_SNOWBALL)

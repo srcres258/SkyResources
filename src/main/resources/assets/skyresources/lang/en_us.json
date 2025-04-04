@@ -42,6 +42,13 @@
     "block.skyresources.crucible_inserter": "Crucible Inserter",
     "block.skyresources.life_injector": "Life Injector",
 
+    "block.skyresources.rock_crusher": "Rock Crusher",
+    "block.skyresources.rock_cleaner": "Rock Cleaner",
+    "block.skyresources.aqueous_concentrator": "Aqueous Concentrator",
+    "block.skyresources.aqueous_deconcentrator": "Aqueous Deconcentrator",
+    "block.skyresources.wildlife_attractor": "Wildlife Attractor",
+    "block.skyresources.dark_matter_transformer": "Dark Matter Transformer",
+
     "item.skyresources.plant_matter": "Plant Matter",
     "item.skyresources.enriched_bone_meal": "Enriched Bone Meal",
     "item.skyresources.heavy_snowball": "Heavy Snowball",
