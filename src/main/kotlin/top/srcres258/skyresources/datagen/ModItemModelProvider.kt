@@ -398,6 +398,19 @@ class ModItemModelProvider(
         basicItem(ModItems.WATER_EXTRACTOR.get())
         basicItem(ModItems.HEALTH_GEM.get())
         basicItem(ModItems.SURVIVALIST_FISHING_ROD.get())
+
+        basicItem(ModItems.SANDSTONE_INFUSION_STONE.get())
+        basicItem(ModItems.RED_SANDSTONE_INFUSION_STONE.get())
+        basicItem(ModItems.ALCHEMICAL_INFUSION_STONE.get())
+
+        basicItem(ModItems.STONE_ROCK_GRINDER.get())
+        basicItem(ModItems.IRON_ROCK_GRINDER.get())
+        basicItem(ModItems.DIAMOND_ROCK_GRINDER.get())
+
+        basicItem(ModItems.CACTUS_CUTTING_KNIFE.get())
+        basicItem(ModItems.STONE_CUTTING_KNIFE.get())
+        basicItem(ModItems.IRON_CUTTING_KNIFE.get())
+        basicItem(ModItems.DIAMOND_CUTTING_KNIFE.get())
     }
 
     private fun machinePartTopItem(

@@ -265,6 +265,19 @@ object ModCreativeModeTabs {
                 output.accept(ModItems.WATER_EXTRACTOR)
                 output.accept(ModItems.HEALTH_GEM)
                 output.accept(ModItems.SURVIVALIST_FISHING_ROD)
+
+                output.accept(ModItems.SANDSTONE_INFUSION_STONE)
+                output.accept(ModItems.RED_SANDSTONE_INFUSION_STONE)
+                output.accept(ModItems.ALCHEMICAL_INFUSION_STONE)
+
+                output.accept(ModItems.STONE_ROCK_GRINDER)
+                output.accept(ModItems.IRON_ROCK_GRINDER)
+                output.accept(ModItems.DIAMOND_ROCK_GRINDER)
+
+                output.accept(ModItems.CACTUS_CUTTING_KNIFE)
+                output.accept(ModItems.STONE_CUTTING_KNIFE)
+                output.accept(ModItems.IRON_CUTTING_KNIFE)
+                output.accept(ModItems.DIAMOND_CUTTING_KNIFE)
             }
             .build()
     }

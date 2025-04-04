@@ -246,5 +246,18 @@
     "item.skyresources.health_gem": "Health Gem",
     "item.skyresources.survivalist_fishing_rod": "Survivalist's Fishing Rod",
 
+    "item.skyresources.sandstone_infusion_stone": "Sandstone Infusion Stone",
+    "item.skyresources.red_sandstone_infusion_stone": "Red Sandstone Infusion Stone",
+    "item.skyresources.alchemical_infusion_stone": "Alchemical Infusion Stone",
+
+    "item.skyresources.stone_rock_grinder": "Stone Rock Grinder",
+    "item.skyresources.iron_rock_grinder": "Iron Rock Grinder",
+    "item.skyresources.diamond_rock_grinder": "Diamond Rock Grinder",
+
+    "item.skyresources.cactus_cutting_knife": "Cactus Cutting Knife",
+    "item.skyresources.stone_cutting_knife": "Stone Cutting Knife",
+    "item.skyresources.iron_cutting_knife": "Iron Cutting Knife",
+    "item.skyresources.diamond_cutting_knife": "Diamond Cutting Knife",
+
     "creativetab.skyresources.sky_resources_tab": "Sky Resources"
 }

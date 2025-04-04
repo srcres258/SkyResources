@@ -6,10 +6,7 @@ import net.neoforged.neoforge.registries.DeferredItem
 import net.neoforged.neoforge.registries.DeferredRegister
 import top.srcres258.skyresources.SkyResources
 import top.srcres258.skyresources.item.custom.*
-import top.srcres258.skyresources.util.AlchemicalLevel
-import top.srcres258.skyresources.util.GemType
-import top.srcres258.skyresources.util.MaterialType
-import top.srcres258.skyresources.util.OreType
+import top.srcres258.skyresources.util.*
 
 object ModItems {
     val ITEMS: DeferredRegister.Items = DeferredRegister.createItems(SkyResources.MOD_ID)
@@ -1031,6 +1028,71 @@ object ModItems {
     }
     val SURVIVALIST_FISHING_ROD: DeferredItem<Item> = registerItem("survivalist_fishing_rod") {
         Item(Item.Properties().stacksTo(1))
+    }
+
+    // ----- World Crafting Tool Items -----
+
+    val SANDSTONE_INFUSION_STONE: DeferredItem<Item> = registerItem("sandstone_infusion_stone") {
+        InfusionStoneItem(
+            InfusionStoneType.SANDSTONE,
+            Item.Properties().stacksTo(1)
+        )
+    }
+    val RED_SANDSTONE_INFUSION_STONE: DeferredItem<Item> = registerItem("red_sandstone_infusion_stone") {
+        InfusionStoneItem(
+            InfusionStoneType.RED_SANDSTONE,
+            Item.Properties().stacksTo(1)
+        )
+    }
+    val ALCHEMICAL_INFUSION_STONE: DeferredItem<Item> = registerItem("alchemical_infusion_stone") {
+        InfusionStoneItem(
+            InfusionStoneType.ALCHEMICAL,
+            Item.Properties().stacksTo(1)
+        )
+    }
+
+    val STONE_ROCK_GRINDER: DeferredItem<Item> = registerItem("stone_rock_grinder") {
+        RockGrinderItem(
+            RockGrinderType.STONE,
+            Item.Properties().stacksTo(1)
+        )
+    }
+    val IRON_ROCK_GRINDER: DeferredItem<Item> = registerItem("iron_rock_grinder") {
+        RockGrinderItem(
+            RockGrinderType.IRON,
+            Item.Properties().stacksTo(1)
+        )
+    }
+    val DIAMOND_ROCK_GRINDER: DeferredItem<Item> = registerItem("diamond_rock_grinder") {
+        RockGrinderItem(
+            RockGrinderType.DIAMOND,
+            Item.Properties().stacksTo(1)
+        )
+    }
+
+    val CACTUS_CUTTING_KNIFE: DeferredItem<Item> = registerItem("cactus_cutting_knife") {
+        CuttingKnifeItem(
+            CuttingKnifeType.CACTUS,
+            Item.Properties().stacksTo(1)
+        )
+    }
+    val STONE_CUTTING_KNIFE: DeferredItem<Item> = registerItem("stone_cutting_knife") {
+        CuttingKnifeItem(
+            CuttingKnifeType.STONE,
+            Item.Properties().stacksTo(1)
+        )
+    }
+    val IRON_CUTTING_KNIFE: DeferredItem<Item> = registerItem("iron_cutting_knife") {
+        CuttingKnifeItem(
+            CuttingKnifeType.IRON,
+            Item.Properties().stacksTo(1)
+        )
+    }
+    val DIAMOND_CUTTING_KNIFE: DeferredItem<Item> = registerItem("diamond_cutting_knife") {
+        CuttingKnifeItem(
+            CuttingKnifeType.DIAMOND,
+            Item.Properties().stacksTo(1)
+        )
     }
 
     private fun <T : Item> registerItem(name: String, item: () -> T) = ITEMS.register(name) { -> item() }

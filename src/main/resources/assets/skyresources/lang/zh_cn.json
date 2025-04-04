@@ -246,5 +246,18 @@
     "item.skyresources.health_gem": "生命宝石",
     "item.skyresources.survivalist_fishing_rod": "生存者钓竿",
 
+    "item.skyresources.sandstone_infusion_stone": "砂岩灌注石",
+    "item.skyresources.red_sandstone_infusion_stone": "红砂岩灌注石",
+    "item.skyresources.alchemical_infusion_stone": "炼金灌注石",
+
+    "item.skyresources.stone_rock_grinder": "石制碎石杵",
+    "item.skyresources.iron_rock_grinder": "铁制碎石杵",
+    "item.skyresources.diamond_rock_grinder": "钻石碎石杵",
+
+    "item.skyresources.cactus_cutting_knife": "仙人掌切割刀",
+    "item.skyresources.stone_cutting_knife": "石制切割刀",
+    "item.skyresources.iron_cutting_knife": "铁制切割刀",
+    "item.skyresources.diamond_cutting_knife": "钻石切割刀",
+
     "creativetab.skyresources.sky_resources_tab": "空岛资源"
 }
