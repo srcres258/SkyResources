@@ -68,6 +68,11 @@ class ModBlockLootTableProvider(
         dropSelf(ModBlocks.AQUEOUS_DECONCENTRATOR.get())
         dropSelf(ModBlocks.WILDLIFE_ATTRACTOR.get())
         dropSelf(ModBlocks.DARK_MATTER_TRANSFORMER.get())
+
+        dropSelf(ModBlocks.ALCHEMICAL_FUSION_TABLE.get())
+        dropSelf(ModBlocks.MINI_FREEZER.get())
+        dropSelf(ModBlocks.IRON_FREEZER.get())
+        dropSelf(ModBlocks.LIGHT_MATTER_FREEZER.get())
     }
 
     override fun getKnownBlocks(): Iterable<Block> = Iterable {

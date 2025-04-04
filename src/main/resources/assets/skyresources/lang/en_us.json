@@ -49,6 +49,11 @@
     "block.skyresources.wildlife_attractor": "Wildlife Attractor",
     "block.skyresources.dark_matter_transformer": "Dark Matter Transformer",
 
+    "block.skyresources.alchemical_fusion_table": "Alchemical Fusion Table",
+    "block.skyresources.mini_freezer": "Mini Freezer",
+    "block.skyresources.iron_freezer": "Iron Freezer",
+    "block.skyresources.light_matter_freezer": "Light Matter Freezer",
+
     "item.skyresources.plant_matter": "Plant Matter",
     "item.skyresources.enriched_bone_meal": "Enriched Bone Meal",
     "item.skyresources.heavy_snowball": "Heavy Snowball",

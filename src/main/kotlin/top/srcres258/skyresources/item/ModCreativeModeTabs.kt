@@ -69,6 +69,11 @@ object ModCreativeModeTabs {
                 output.accept(ModBlocks.WILDLIFE_ATTRACTOR)
                 output.accept(ModBlocks.DARK_MATTER_TRANSFORMER)
 
+                output.accept(ModBlocks.ALCHEMICAL_FUSION_TABLE)
+                output.accept(ModBlocks.MINI_FREEZER)
+                output.accept(ModBlocks.IRON_FREEZER)
+                output.accept(ModBlocks.LIGHT_MATTER_FREEZER)
+
                 output.accept(ModItems.PLANT_MATTER)
                 output.accept(ModItems.ENRICHED_BONE_MEAL)
                 output.accept(ModItems.HEAVY_SNOWBALL)

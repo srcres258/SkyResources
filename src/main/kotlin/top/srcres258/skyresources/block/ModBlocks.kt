@@ -362,6 +362,27 @@ object ModBlocks {
         )
     }
 
+    // Crafting Device Blocks
+
+    val ALCHEMICAL_FUSION_TABLE: DeferredBlock<Block> = registerBlockWithItem("alchemical_fusion_table") {
+        AlchemicalFusionTableBlock(
+            BlockBehaviour.Properties.of()
+                .mapColor(MapColor.WOOD)
+                .instrument(NoteBlockInstrument.BASS)
+                .strength(2.5f)
+                .sound(SoundType.WOOD)
+                .ignitedByLava()
+        )
+    }
+    val MINI_FREEZER: DeferredBlock<Block> = registerBlockWithItem("mini_freezer") {
+        MiniFreezerBlock(MACHINE_BLOCK_PROPERTIES)
+    }
+    val IRON_FREEZER: DeferredBlock<Block> = registerBlockWithItem("iron_freezer") {
+        IronFreezerBlock(MACHINE_BLOCK_PROPERTIES)
+    }
+    val LIGHT_MATTER_FREEZER: DeferredBlock<Block> = registerBlockWithItem("light_matter_freezer") {
+        LightMatterFreezerBlock(MACHINE_BLOCK_PROPERTIES)
+    }
 
     private fun <T : Block> registerBlockWithItem(name: String, block: () -> T) =
         BLOCKS.register(name, block).also { deferredBlock ->

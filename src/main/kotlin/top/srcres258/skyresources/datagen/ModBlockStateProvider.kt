@@ -121,6 +121,22 @@ class ModBlockStateProvider(
             modLoc("block/wildlife_attractor_side")
         ).texture("particle", modLoc("block/wildlife_attractor_side")))
         blockWithItem(ModBlocks.DARK_MATTER_TRANSFORMER.get())
+
+        blockWithItem(ModBlocks.ALCHEMICAL_FUSION_TABLE.get(), models().cube(
+            ModBlocks.ALCHEMICAL_FUSION_TABLE.id.path,
+            modLoc("block/alchemical_fusion_table_bottom"),
+            modLoc("block/alchemical_fusion_table_top"),
+            modLoc("block/alchemical_fusion_table_side"),
+            modLoc("block/alchemical_fusion_table_side"),
+            modLoc("block/alchemical_fusion_table_side"),
+            modLoc("block/alchemical_fusion_table_side")
+        ).texture("particle", modLoc("block/alchemical_fusion_table_side")))
+        blockWithItem(ModBlocks.MINI_FREEZER.get(),
+            models().getExistingFile(modLoc("block/mini_freezer")))
+        blockWithItem(ModBlocks.IRON_FREEZER.get(),
+            models().getExistingFile(modLoc("block/iron_freezer_bottom")))
+        blockWithItem(ModBlocks.LIGHT_MATTER_FREEZER.get(),
+            models().getExistingFile(modLoc("block/light_matter_freezer_bottom")))
     }
 
     private fun blockWithItem(block: Block, model: ModelFile = cubeAll(block)) {

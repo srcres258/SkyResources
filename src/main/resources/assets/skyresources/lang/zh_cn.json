@@ -49,6 +49,11 @@
     "block.skyresources.wildlife_attractor": "野生动物吸引装置",
     "block.skyresources.dark_matter_transformer": "暗物质生物转化装置",
 
+    "block.skyresources.alchemical_fusion_table": "炼金灌注台",
+    "block.skyresources.mini_freezer": "迷你冰箱",
+    "block.skyresources.iron_freezer": "铁制冰箱",
+    "block.skyresources.light_matter_freezer": "亮物质冰箱",
+
     "item.skyresources.plant_matter": "自然物质",
     "item.skyresources.enriched_bone_meal": "强化骨粉",
     "item.skyresources.heavy_snowball": "重型雪球",
