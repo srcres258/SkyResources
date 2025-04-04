@@ -261,6 +261,10 @@ object ModCreativeModeTabs {
                 output.accept(ModItems.LIGHT_MATTER_COMBUSTION_HEATER)
                 output.accept(ModItems.OSMIUM_COMBUSTION_HEATER)
                 output.accept(ModItems.REFINED_OBSIDIAN_COMBUSTION_HEATER)
+
+                output.accept(ModItems.WATER_EXTRACTOR)
+                output.accept(ModItems.HEALTH_GEM)
+                output.accept(ModItems.SURVIVALIST_FISHING_ROD)
             }
             .build()
     }

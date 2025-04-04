@@ -394,6 +394,10 @@ class ModItemModelProvider(
             modLoc("block/combustion_heater"),
             modLoc("block/refined_obsidian_machine")
         )
+
+        basicItem(ModItems.WATER_EXTRACTOR.get())
+        basicItem(ModItems.HEALTH_GEM.get())
+        basicItem(ModItems.SURVIVALIST_FISHING_ROD.get())
     }
 
     private fun machinePartTopItem(

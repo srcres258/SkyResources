@@ -242,5 +242,9 @@
     "item.skyresources.osmium_combustion_heater": "Osmium Combustion Heater",
     "item.skyresources.refined_obsidian_combustion_heater": "Refined Obsidian Combustion Heater",
 
+    "item.skyresources.water_extractor": "Water Extractor",
+    "item.skyresources.health_gem": "Health Gem",
+    "item.skyresources.survivalist_fishing_rod": "Survivalist's Fishing Rod",
+
     "creativetab.skyresources.sky_resources_tab": "Sky Resources"
 }

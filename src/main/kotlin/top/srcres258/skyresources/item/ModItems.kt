@@ -1021,6 +1021,18 @@ object ModItems {
         )
     }
 
+    // ----- Tool Items -----
+
+    val WATER_EXTRACTOR: DeferredItem<Item> = registerItem("water_extractor") {
+        Item(Item.Properties().stacksTo(1))
+    }
+    val HEALTH_GEM: DeferredItem<Item> = registerItem("health_gem") {
+        Item(Item.Properties().stacksTo(1))
+    }
+    val SURVIVALIST_FISHING_ROD: DeferredItem<Item> = registerItem("survivalist_fishing_rod") {
+        Item(Item.Properties().stacksTo(1))
+    }
+
     private fun <T : Item> registerItem(name: String, item: () -> T) = ITEMS.register(name) { -> item() }
 
     fun register(eventBus: IEventBus) {

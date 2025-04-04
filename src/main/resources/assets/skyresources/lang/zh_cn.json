@@ -242,5 +242,9 @@
     "item.skyresources.osmium_combustion_heater": "锇制氧化加热器",
     "item.skyresources.refined_obsidian_combustion_heater": "强化黑曜石氧化加热器",
 
+    "item.skyresources.water_extractor": "抽水器",
+    "item.skyresources.health_gem": "生命宝石",
+    "item.skyresources.survivalist_fishing_rod": "生存者钓竿",
+
     "creativetab.skyresources.sky_resources_tab": "空岛资源"
 }
