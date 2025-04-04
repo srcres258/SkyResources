@@ -1,5 +1,5 @@
 {
-    "parent":"minecraft:block/cauldron",
+    "parent": "minecraft:block/cauldron",
     "textures": {
         "particle": "minecraft:block/bricks",
         "top": "skyresources:block/crucible_top",

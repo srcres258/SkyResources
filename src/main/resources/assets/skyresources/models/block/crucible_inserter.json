@@ -8,7 +8,8 @@
         "particle": "skyresources:block/machine"
     },
     "elements": [
-        {   "from": [ 0, 10, 0 ],
+        {
+            "from": [ 0, 10, 0 ],
             "to": [ 16, 16, 16 ],
             "faces": {
                 "down":  { "texture": "#side" },
@@ -19,7 +20,8 @@
                 "east":  { "texture": "#side" }
             }
         },
-        {   "from": [ 4, 0, 4 ],
+        {
+            "from": [ 4, 0, 4 ],
             "to": [ 12, 10, 12 ],
             "faces": {
                 "down":  { "texture": "#bottom" },
@@ -30,7 +32,8 @@
                 "east":  { "texture": "#side" }
             }
         },
-        {   "from": [ 0, 0, 0 ],
+        {
+            "from": [ 0, 0, 0 ],
             "to": [ 1, 10, 1 ],
             "faces": {
                 "down":  { "texture": "#bottom" },
@@ -41,7 +44,8 @@
                 "east":  { "texture": "#side" }
             }
         },
-        {   "from": [ 15, 0, 0 ],
+        {
+            "from": [ 15, 0, 0 ],
             "to": [ 16, 10, 1 ],
             "faces": {
                 "down":  { "texture": "#bottom" },
@@ -52,7 +56,8 @@
                 "east":  { "texture": "#side" }
             }
         },
-        {   "from": [ 0, 0, 15 ],
+        {
+            "from": [ 0, 0, 15 ],
             "to": [ 1, 10, 16 ],
             "faces": {
                 "down":  { "texture": "#bottom" },
@@ -63,7 +68,8 @@
                 "east":  { "texture": "#side" }
             }
         },
-        {   "from": [ 15, 0, 15 ],
+        {
+            "from": [ 15, 0, 15 ],
             "to": [ 16, 10, 16 ],
             "faces": {
                 "down":  { "texture": "#bottom" },
