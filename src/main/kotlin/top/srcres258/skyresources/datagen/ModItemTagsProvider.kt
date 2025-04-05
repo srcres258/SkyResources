@@ -3,6 +3,8 @@ package top.srcres258.skyresources.datagen
 import net.minecraft.core.HolderLookup
 import net.minecraft.data.PackOutput
 import net.minecraft.data.tags.ItemTagsProvider
+import net.minecraft.resources.ResourceLocation
+import net.minecraft.tags.ItemTags
 import net.minecraft.world.level.block.Block
 import net.neoforged.neoforge.common.data.ExistingFileHelper
 import top.srcres258.skyresources.SkyResources
@@ -14,5 +16,9 @@ class ModItemTagsProvider(
     blockTags: CompletableFuture<TagLookup<Block>>,
     existingFileHelper: ExistingFileHelper?
 ) : ItemTagsProvider(output, lookupProvider, blockTags, SkyResources.MOD_ID, existingFileHelper) {
-    override fun addTags(provider: HolderLookup.Provider) {}
+    override fun addTags(provider: HolderLookup.Provider) {
+    }
+
+    private fun cTag(name: String) =
+        tag(ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", name)))
 }

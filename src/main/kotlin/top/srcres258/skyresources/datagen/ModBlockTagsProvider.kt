@@ -2,6 +2,7 @@ package top.srcres258.skyresources.datagen
 
 import net.minecraft.core.HolderLookup
 import net.minecraft.data.PackOutput
+import net.minecraft.resources.ResourceLocation
 import net.minecraft.tags.BlockTags
 import net.neoforged.neoforge.common.data.BlockTagsProvider
 import net.neoforged.neoforge.common.data.ExistingFileHelper
@@ -79,5 +80,17 @@ class ModBlockTagsProvider(
 
         tag(BlockTags.WOLVES_SPAWNABLE_ON)
             .add(ModBlocks.HEAVY_SNOW_BLOCK.get())
+
+        tag(BlockTags.LOGS)
+            .add(ModBlocks.PETRIFIED_WOOD.get())
+
+        tag(BlockTags.PLANKS)
+            .add(ModBlocks.PRTIFIED_PLANKS.get())
+
+        cTag("glass_blocks/colorless")
+            .add(ModBlocks.ALCHEMICAL_GLASS.get())
     }
+
+    private fun cTag(name: String) =
+        tag(BlockTags.create(ResourceLocation.fromNamespaceAndPath("c", name)))
 }
