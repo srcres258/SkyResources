@@ -262,5 +262,8 @@
     "item.skyresources.cactus_fruit": "Cactus Fruit",
     "item.skyresources.fleshy_snow_nugget": "Fleshy Snow Nugget",
 
+    "item.skyresources.crystal_fluid_bucket": "Crystal Fluid Bucket",
+    "item.skyresources.dirty_crystal_fluid_bucket": "Dirty Crystal Fluid Bucket",
+
     "creativetab.skyresources.sky_resources_tab": "Sky Resources"
 }

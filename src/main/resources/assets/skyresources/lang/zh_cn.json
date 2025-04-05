@@ -262,5 +262,8 @@
     "item.skyresources.cactus_fruit": "仙人掌果",
     "item.skyresources.fleshy_snow_nugget": "沾满血肉的雪球",
 
+    "item.skyresources.crystal_fluid_bucket": "水晶流体桶",
+    "item.skyresources.dirty_crystal_fluid_bucket": "污浊的水晶流体桶",
+
     "creativetab.skyresources.sky_resources_tab": "空岛资源"
 }

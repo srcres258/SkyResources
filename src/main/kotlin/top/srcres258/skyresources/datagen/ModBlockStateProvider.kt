@@ -137,6 +137,9 @@ class ModBlockStateProvider(
             models().getExistingFile(modLoc("block/iron_freezer_bottom")))
         blockWithItem(ModBlocks.LIGHT_MATTER_FREEZER.get(),
             models().getExistingFile(modLoc("block/light_matter_freezer_bottom")))
+
+        fluid(ModBlocks.CRYSTAL_FLUID)
+        fluid(ModBlocks.DIRTY_CRYSTAL_FLUID)
     }
 
     private fun blockWithItem(block: Block, model: ModelFile = cubeAll(block)) {
@@ -195,6 +198,11 @@ class ModBlockStateProvider(
             { modLoc("block/${block.id.path}") },
             { modLoc("block/machine") }
         )
+    }
+
+    private fun fluid(block: DeferredBlock<out Block>) {
+        models().getBuilder(block.id.toString())
+            .texture("particle", mcLoc("block/water_still"))
     }
 }
 

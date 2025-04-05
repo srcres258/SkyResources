@@ -281,6 +281,9 @@ object ModCreativeModeTabs {
 
                 output.accept(ModItems.CACTUS_FRUIT)
                 output.accept(ModItems.FLESHY_SNOW_NUGGET)
+
+                output.accept(ModItems.CRYSTAL_FLUID_BUCKET)
+                output.accept(ModItems.DIRTY_CRYSTAL_FLUID_BUCKET)
             }
             .build()
     }

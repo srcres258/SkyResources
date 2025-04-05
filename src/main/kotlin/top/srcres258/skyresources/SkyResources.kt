@@ -7,10 +7,13 @@ import net.neoforged.bus.api.SubscribeEvent
 import net.neoforged.fml.common.EventBusSubscriber
 import net.neoforged.fml.common.Mod
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent
+import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
 import thedarkcolour.kotlinforforge.neoforge.forge.MOD_BUS
 import top.srcres258.skyresources.block.ModBlocks
+import top.srcres258.skyresources.block.ModFluidTypes
+import top.srcres258.skyresources.block.ModFluids
 import top.srcres258.skyresources.entity.ModEntities
 import top.srcres258.skyresources.item.ModCreativeModeTabs
 import top.srcres258.skyresources.item.ModItems
@@ -28,6 +31,8 @@ object SkyResources {
         ModCreativeModeTabs.register(MOD_BUS)
         ModItems.register(MOD_BUS)
         ModBlocks.register(MOD_BUS)
+        ModFluidTypes.register(MOD_BUS)
+        ModFluids.register(MOD_BUS)
         ModEntities.register(MOD_BUS)
     }
 
@@ -37,6 +42,11 @@ object SkyResources {
         fun onClientSetup(event: FMLClientSetupEvent) {
             EntityRenderers.register(ModEntities.HEAVY_SNOWBALL.get(), ::ThrownItemRenderer)
             EntityRenderers.register(ModEntities.EXPLOSIVE_HEAVY_SNOWBALL.get(), ::ThrownItemRenderer)
+        }
+
+        @SubscribeEvent
+        fun onRegisterClientExtensions(event: RegisterClientExtensionsEvent) {
+            ModFluidTypes.registerClientExtensions(event)
         }
     }
 }

@@ -6,6 +6,7 @@ import net.minecraft.world.item.Item
 import net.minecraft.world.level.block.*
 import net.minecraft.world.level.block.state.BlockBehaviour
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument
+import net.minecraft.world.level.material.FlowingFluid
 import net.minecraft.world.level.material.MapColor
 import net.minecraft.world.level.material.PushReaction
 import net.neoforged.bus.api.IEventBus
@@ -383,6 +384,42 @@ object ModBlocks {
     val LIGHT_MATTER_FREEZER: DeferredBlock<Block> = registerBlockWithItem("light_matter_freezer") {
         LightMatterFreezerBlock(MACHINE_BLOCK_PROPERTIES)
     }
+
+    // ----- Liquid Blocks -----
+
+    val CRYSTAL_FLUID: DeferredBlock<Block> = registerBlock("crystal_fluid") {
+        LiquidBlock(
+            ModFluids.CRYSTAL_FLUID.get() as FlowingFluid,
+            BlockBehaviour.Properties.of()
+                .mapColor(MapColor.WATER)
+                .replaceable()
+                .noCollission()
+                .strength(100.0F)
+                .lightLevel { _ -> 15 }
+                .pushReaction(PushReaction.DESTROY)
+                .noLootTable()
+                .liquid()
+                .sound(SoundType.EMPTY)
+        )
+    }
+    val DIRTY_CRYSTAL_FLUID: DeferredBlock<Block> = registerBlock("dirty_crystal_fluid") {
+        LiquidBlock(
+            ModFluids.DIRTY_CRYSTAL_FLUID.get() as FlowingFluid,
+            BlockBehaviour.Properties.of()
+                .mapColor(MapColor.WATER)
+                .replaceable()
+                .noCollission()
+                .strength(100.0F)
+                .lightLevel { _ -> 15 }
+                .pushReaction(PushReaction.DESTROY)
+                .noLootTable()
+                .liquid()
+                .sound(SoundType.EMPTY)
+        )
+    }
+
+    private fun <T : Block> registerBlock(name: String, block: () -> T) =
+        BLOCKS.register(name, block)
 
     private fun <T : Block> registerBlockWithItem(name: String, block: () -> T) =
         BLOCKS.register(name, block).also { deferredBlock ->

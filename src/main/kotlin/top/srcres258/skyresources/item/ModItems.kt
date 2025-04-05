@@ -1,10 +1,13 @@
 package top.srcres258.skyresources.item
 
+import net.minecraft.world.item.BucketItem
 import net.minecraft.world.item.Item
+import net.minecraft.world.item.Items
 import net.neoforged.bus.api.IEventBus
 import net.neoforged.neoforge.registries.DeferredItem
 import net.neoforged.neoforge.registries.DeferredRegister
 import top.srcres258.skyresources.SkyResources
+import top.srcres258.skyresources.block.ModFluids
 import top.srcres258.skyresources.item.custom.*
 import top.srcres258.skyresources.util.*
 
@@ -1102,6 +1105,25 @@ object ModItems {
     }
     val FLESHY_SNOW_NUGGET: DeferredItem<Item> = registerItem("fleshy_snow_nugget") {
         Item(Item.Properties().food(ModFoods.FLESHY_SNOW_NUGGET))
+    }
+
+    // ----- Liquid Bucket Items -----
+
+    val CRYSTAL_FLUID_BUCKET: DeferredItem<Item> = registerItem("crystal_fluid_bucket") {
+        BucketItem(
+            ModFluids.CRYSTAL_FLUID.get(),
+            Item.Properties()
+                .craftRemainder(Items.BUCKET)
+                .stacksTo(1)
+        )
+    }
+    val DIRTY_CRYSTAL_FLUID_BUCKET: DeferredItem<Item> = registerItem("dirty_crystal_fluid_bucket") {
+        BucketItem(
+            ModFluids.DIRTY_CRYSTAL_FLUID.get(),
+            Item.Properties()
+                .craftRemainder(Items.BUCKET)
+                .stacksTo(1)
+        )
     }
 
     private fun <T : Item> registerItem(name: String, item: () -> T) = ITEMS.register(name) { -> item() }

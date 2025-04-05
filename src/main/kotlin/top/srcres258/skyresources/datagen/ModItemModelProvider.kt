@@ -3,17 +3,18 @@ package top.srcres258.skyresources.datagen
 import net.minecraft.data.PackOutput
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.item.Item
-import net.neoforged.neoforge.client.model.generators.ItemModelProvider
+import net.minecraft.world.level.material.Fluid
 import net.neoforged.neoforge.client.model.generators.ModelFile
 import net.neoforged.neoforge.common.data.ExistingFileHelper
+import net.neoforged.neoforge.registries.DeferredHolder
 import net.neoforged.neoforge.registries.DeferredItem
-import top.srcres258.skyresources.SkyResources
+import top.srcres258.skyresources.block.ModFluids
 import top.srcres258.skyresources.item.ModItems
 
 class ModItemModelProvider(
     output: PackOutput,
     existingFileHelper: ExistingFileHelper
-) : ItemModelProvider(output, SkyResources.MOD_ID, existingFileHelper) {
+) : CustomItemModelProvider(output, existingFileHelper) {
     override fun registerModels() {
         basicItem(ModItems.PLANT_MATTER.get())
         basicItem(ModItems.ENRICHED_BONE_MEAL.get())
@@ -414,6 +415,9 @@ class ModItemModelProvider(
 
         basicItem(ModItems.CACTUS_FRUIT.get())
         basicItem(ModItems.FLESHY_SNOW_NUGGET.get())
+
+        fluidBucket(ModItems.CRYSTAL_FLUID_BUCKET, ModFluids.CRYSTAL_FLUID)
+        fluidBucket(ModItems.DIRTY_CRYSTAL_FLUID_BUCKET, ModFluids.DIRTY_CRYSTAL_FLUID)
     }
 
     private fun machinePartTopItem(
@@ -431,6 +435,19 @@ class ModItemModelProvider(
             .also { builder ->
                 if (allTextureId != null) {
                     builder.texture("all", allTextureId)
+                }
+            }
+
+    private fun fluidBucket(item: DeferredItem<out Item>, fluid: DeferredHolder<Fluid, out Fluid>) =
+        getBuilder(item.id.toString())
+            .parent(ModelFile.ExistingModelFile(
+                ResourceLocation.fromNamespaceAndPath("neoforge", "item/bucket_drip"),
+                existingFileHelper)
+            )
+            .also { builder ->
+                (builder as CustomItemModelBuilder).let { customBuilder ->
+                    customBuilder.loader = ResourceLocation.fromNamespaceAndPath("neoforge", "fluid_container")
+                    customBuilder.fluid = fluid.id
                 }
             }
 }
