@@ -411,6 +411,9 @@ class ModItemModelProvider(
         basicItem(ModItems.STONE_CUTTING_KNIFE.get())
         basicItem(ModItems.IRON_CUTTING_KNIFE.get())
         basicItem(ModItems.DIAMOND_CUTTING_KNIFE.get())
+
+        basicItem(ModItems.CACTUS_FRUIT.get())
+        basicItem(ModItems.FLESHY_SNOW_NUGGET.get())
     }
 
     private fun machinePartTopItem(

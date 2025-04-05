@@ -278,6 +278,9 @@ object ModCreativeModeTabs {
                 output.accept(ModItems.STONE_CUTTING_KNIFE)
                 output.accept(ModItems.IRON_CUTTING_KNIFE)
                 output.accept(ModItems.DIAMOND_CUTTING_KNIFE)
+
+                output.accept(ModItems.CACTUS_FRUIT)
+                output.accept(ModItems.FLESHY_SNOW_NUGGET)
             }
             .build()
     }

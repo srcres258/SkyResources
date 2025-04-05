@@ -1095,6 +1095,15 @@ object ModItems {
         )
     }
 
+    // ----- Food Items -----
+
+    val CACTUS_FRUIT: DeferredItem<Item> = registerItem("cactus_fruit") {
+        Item(Item.Properties().food(ModFoods.CACTUS_FRUIT))
+    }
+    val FLESHY_SNOW_NUGGET: DeferredItem<Item> = registerItem("fleshy_snow_nugget") {
+        Item(Item.Properties().food(ModFoods.FLESHY_SNOW_NUGGET))
+    }
+
     private fun <T : Item> registerItem(name: String, item: () -> T) = ITEMS.register(name) { -> item() }
 
     fun register(eventBus: IEventBus) {
