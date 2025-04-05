@@ -1,6 +1,8 @@
 package top.srcres258.skyresources.util
 
-enum class OreType {
+import net.minecraft.util.StringRepresentable
+
+enum class OreType : StringRepresentable {
     /**
      * 铁
      */
@@ -107,7 +109,7 @@ enum class OreType {
     MAGNESIUM,
 
     /**
-     * 秘
+     * 铋
      */
     MITHRIL,
 
@@ -124,5 +126,9 @@ enum class OreType {
     /**
      * 钍
      */
-    THORIUM
+    THORIUM;
+
+    override fun getSerializedName(): String = name.lowercase()
+
+    override fun toString(): String = getSerializedName()
 }

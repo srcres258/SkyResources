@@ -265,5 +265,28 @@
     "item.skyresources.crystal_fluid_bucket": "水晶流体桶",
     "item.skyresources.dirty_crystal_fluid_bucket": "污浊的水晶流体桶",
 
+    "item.skyresources.tin_ingot": "锡锭",
+    "item.skyresources.silver_ingot": "银锭",
+    "item.skyresources.zinc_ingot": "锌锭",
+    "item.skyresources.nickel_ingot": "镍锭",
+    "item.skyresources.platinum_ingot": "铂锭",
+    "item.skyresources.aluminum_ingot": "铝锭",
+    "item.skyresources.lead_ingot": "铅锭",
+    "item.skyresources.cobalt_ingot": "钴锭",
+    "item.skyresources.ardite_ingot": "阿迪特锭",
+    "item.skyresources.osmium_ingot": "锇锭",
+    "item.skyresources.draconium_ingot": "龙锭",
+    "item.skyresources.titanium_ingot": "钛锭",
+    "item.skyresources.tungsten_ingot": "钨锭",
+    "item.skyresources.chrome_ingot": "铬锭",
+    "item.skyresources.iridium_ingot": "铱锭",
+    "item.skyresources.boron_ingot": "硼锭",
+    "item.skyresources.lithium_ingot": "锂锭",
+    "item.skyresources.magnesium_ingot": "镁锭",
+    "item.skyresources.mithril_ingot": "铋锭",
+    "item.skyresources.yellorium_ingot": "黄铀锭",
+    "item.skyresources.uranium_ingot": "铀锭",
+    "item.skyresources.thorium_ingot": "钍锭",
+
     "creativetab.skyresources.sky_resources_tab": "空岛资源"
 }

@@ -265,5 +265,28 @@
     "item.skyresources.crystal_fluid_bucket": "Crystal Fluid Bucket",
     "item.skyresources.dirty_crystal_fluid_bucket": "Dirty Crystal Fluid Bucket",
 
+    "item.skyresources.tin_ingot": "Tin Ingot",
+    "item.skyresources.silver_ingot": "Silver Ingot",
+    "item.skyresources.zinc_ingot": "Zinc Ingot",
+    "item.skyresources.nickel_ingot": "Nickel Ingot",
+    "item.skyresources.platinum_ingot": "Platinum Ingot",
+    "item.skyresources.aluminum_ingot": "Aluminum Ingot",
+    "item.skyresources.lead_ingot": "Lead Ingot",
+    "item.skyresources.cobalt_ingot": "Cobalt Ingot",
+    "item.skyresources.ardite_ingot": "Ardite Ingot",
+    "item.skyresources.osmium_ingot": "Osmium Ingot",
+    "item.skyresources.draconium_ingot": "Draconium Ingot",
+    "item.skyresources.titanium_ingot": "Titanium Ingot",
+    "item.skyresources.tungsten_ingot": "Tungsten Ingot",
+    "item.skyresources.chrome_ingot": "Chrome Ingot",
+    "item.skyresources.iridium_ingot": "Iridium Ingot",
+    "item.skyresources.boron_ingot": "Boron Ingot",
+    "item.skyresources.lithium_ingot": "Lithium Ingot",
+    "item.skyresources.magnesium_ingot": "Magnesium Ingot",
+    "item.skyresources.mithril_ingot": "Mithril Ingot",
+    "item.skyresources.yellorium_ingot": "Yellorium Ingot",
+    "item.skyresources.uranium_ingot": "Uranium Ingot",
+    "item.skyresources.thorium_ingot": "Thorium Ingot",
+
     "creativetab.skyresources.sky_resources_tab": "Sky Resources"
 }

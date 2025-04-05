@@ -8,8 +8,10 @@ import net.neoforged.neoforge.client.model.generators.ModelFile
 import net.neoforged.neoforge.common.data.ExistingFileHelper
 import net.neoforged.neoforge.registries.DeferredHolder
 import net.neoforged.neoforge.registries.DeferredItem
+import top.srcres258.skyresources.SkyResources
 import top.srcres258.skyresources.block.ModFluids
 import top.srcres258.skyresources.item.ModItems
+import top.srcres258.skyresources.item.custom.IngotItem
 
 class ModItemModelProvider(
     output: PackOutput,
@@ -418,6 +420,29 @@ class ModItemModelProvider(
 
         fluidBucket(ModItems.CRYSTAL_FLUID_BUCKET, ModFluids.CRYSTAL_FLUID)
         fluidBucket(ModItems.DIRTY_CRYSTAL_FLUID_BUCKET, ModFluids.DIRTY_CRYSTAL_FLUID)
+
+        ingotItem(ModItems.TIN_INGOT as DeferredItem<IngotItem>)
+        ingotItem(ModItems.SILVER_INGOT as DeferredItem<IngotItem>)
+        ingotItem(ModItems.ZINC_INGOT as DeferredItem<IngotItem>)
+        ingotItem(ModItems.NICKEL_INGOT as DeferredItem<IngotItem>)
+        ingotItem(ModItems.PLATINUM_INGOT as DeferredItem<IngotItem>)
+        ingotItem(ModItems.ALUMINUM_INGOT as DeferredItem<IngotItem>)
+        ingotItem(ModItems.LEAD_INGOT as DeferredItem<IngotItem>)
+        ingotItem(ModItems.COBALT_INGOT as DeferredItem<IngotItem>)
+        ingotItem(ModItems.ARDITE_INGOT as DeferredItem<IngotItem>)
+        ingotItem(ModItems.OSMIUM_INGOT as DeferredItem<IngotItem>)
+        ingotItem(ModItems.DRACONIUM_INGOT as DeferredItem<IngotItem>)
+        ingotItem(ModItems.TITANIUM_INGOT as DeferredItem<IngotItem>)
+        ingotItem(ModItems.TUNGSTEN_INGOT as DeferredItem<IngotItem>)
+        ingotItem(ModItems.CHROME_INGOT as DeferredItem<IngotItem>)
+        ingotItem(ModItems.IRIDIUM_INGOT as DeferredItem<IngotItem>)
+        ingotItem(ModItems.BORON_INGOT as DeferredItem<IngotItem>)
+        ingotItem(ModItems.LITHIUM_INGOT as DeferredItem<IngotItem>)
+        ingotItem(ModItems.MAGNESIUM_INGOT as DeferredItem<IngotItem>)
+        ingotItem(ModItems.MITHRIL_INGOT as DeferredItem<IngotItem>)
+        ingotItem(ModItems.YELLORIUM_INGOT as DeferredItem<IngotItem>)
+        ingotItem(ModItems.URANIUM_INGOT as DeferredItem<IngotItem>)
+        ingotItem(ModItems.THORIUM_INGOT as DeferredItem<IngotItem>)
     }
 
     private fun machinePartTopItem(
@@ -450,4 +475,9 @@ class ModItemModelProvider(
                     customBuilder.fluid = fluid.id
                 }
             }
+
+    private fun ingotItem(item: DeferredItem<IngotItem>) =
+        getBuilder(item.id.toString())
+            .parent(ModelFile.UncheckedModelFile("item/generated"))
+            .texture("layer0", ResourceLocation.fromNamespaceAndPath(SkyResources.MOD_ID, "item/ingot/${item.get().type}"))
 }

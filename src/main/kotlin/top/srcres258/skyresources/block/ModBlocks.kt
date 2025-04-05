@@ -16,12 +16,29 @@ import top.srcres258.skyresources.SkyResources
 import top.srcres258.skyresources.block.custom.*
 import top.srcres258.skyresources.item.ModItems
 import top.srcres258.skyresources.util.MaterialType
+import top.srcres258.skyresources.util.copy
 
 private val MACHINE_BLOCK_PROPERTIES = BlockBehaviour.Properties.of()
     .mapColor(MapColor.STONE)
     .requiresCorrectToolForDrops()
     .strength(3.0F, 4.8F)
     .sound(SoundType.METAL)
+private val INGOT_BLOCK_PROPERTIES = BlockBehaviour.Properties.of()
+    .mapColor(MapColor.METAL)
+    .instrument(NoteBlockInstrument.IRON_XYLOPHONE)
+    .requiresCorrectToolForDrops()
+    .strength(5.0F, 6.0F)
+    .sound(SoundType.METAL)
+private val ORE_PROPERTIES = BlockBehaviour.Properties.of()
+    .mapColor(MapColor.STONE)
+    .instrument(NoteBlockInstrument.BASEDRUM)
+    .requiresCorrectToolForDrops()
+    .strength(3.0F, 3.0F)
+    .sound(SoundType.STONE)
+private val DEEPSLATE_ORE_PROPERTIES = ORE_PROPERTIES.copy()
+    .mapColor(MapColor.DEEPSLATE)
+    .strength(4.5F, 3.0F)
+    .sound(SoundType.DEEPSLATE)
 
 object ModBlocks {
     val BLOCKS: DeferredRegister.Blocks = DeferredRegister.createBlocks(SkyResources.MOD_ID)
@@ -358,7 +375,8 @@ object ModBlocks {
     }
     val DARK_MATTER_TRANSFORMER: DeferredBlock<Block> = registerBlockWithItem("dark_matter_transformer") {
         DarkMatterTransformerBlock(
-            MACHINE_BLOCK_PROPERTIES.mapColor(MapColor.COLOR_BLACK)
+            MACHINE_BLOCK_PROPERTIES.copy()
+                .mapColor(MapColor.COLOR_BLACK)
                 .instrument(NoteBlockInstrument.BASEDRUM)
         )
     }

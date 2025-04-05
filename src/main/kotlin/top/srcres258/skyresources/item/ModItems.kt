@@ -1126,6 +1126,75 @@ object ModItems {
         )
     }
 
+    // ----- Ingot Items -----
+
+    val TIN_INGOT: DeferredItem<Item> = registerItem("tin_ingot") {
+        IngotItem(OreType.TIN, Item.Properties())
+    }
+    val SILVER_INGOT: DeferredItem<Item> = registerItem("silver_ingot") {
+        IngotItem(OreType.SILVER, Item.Properties())
+    }
+    val ZINC_INGOT: DeferredItem<Item> = registerItem("zinc_ingot") {
+        IngotItem(OreType.ZINC, Item.Properties())
+    }
+    val NICKEL_INGOT: DeferredItem<Item> = registerItem("nickel_ingot") {
+        IngotItem(OreType.NICKEL, Item.Properties())
+    }
+    val PLATINUM_INGOT: DeferredItem<Item> = registerItem("platinum_ingot") {
+        IngotItem(OreType.PLATINUM, Item.Properties())
+    }
+    val ALUMINUM_INGOT: DeferredItem<Item> = registerItem("aluminum_ingot") {
+        IngotItem(OreType.ALUMINUM, Item.Properties())
+    }
+    val LEAD_INGOT: DeferredItem<Item> = registerItem("lead_ingot") {
+        IngotItem(OreType.LEAD, Item.Properties())
+    }
+    val COBALT_INGOT: DeferredItem<Item> = registerItem("cobalt_ingot") {
+        IngotItem(OreType.COBALT, Item.Properties())
+    }
+    val ARDITE_INGOT: DeferredItem<Item> = registerItem("ardite_ingot") {
+        IngotItem(OreType.ARDITE, Item.Properties())
+    }
+    val OSMIUM_INGOT: DeferredItem<Item> = registerItem("osmium_ingot") {
+        IngotItem(OreType.OSMIUM, Item.Properties())
+    }
+    val DRACONIUM_INGOT: DeferredItem<Item> = registerItem("draconium_ingot") {
+        IngotItem(OreType.DRACONIUM, Item.Properties())
+    }
+    val TITANIUM_INGOT: DeferredItem<Item> = registerItem("titanium_ingot") {
+        IngotItem(OreType.TITANIUM, Item.Properties())
+    }
+    val TUNGSTEN_INGOT: DeferredItem<Item> = registerItem("tungsten_ingot") {
+        IngotItem(OreType.TUNGSTEN, Item.Properties())
+    }
+    val CHROME_INGOT: DeferredItem<Item> = registerItem("chrome_ingot") {
+        IngotItem(OreType.CHROME, Item.Properties())
+    }
+    val IRIDIUM_INGOT: DeferredItem<Item> = registerItem("iridium_ingot") {
+        IngotItem(OreType.IRIDIUM, Item.Properties())
+    }
+    val BORON_INGOT: DeferredItem<Item> = registerItem("boron_ingot") {
+        IngotItem(OreType.BORON, Item.Properties())
+    }
+    val LITHIUM_INGOT: DeferredItem<Item> = registerItem("lithium_ingot") {
+        IngotItem(OreType.LITHIUM, Item.Properties())
+    }
+    val MAGNESIUM_INGOT: DeferredItem<Item> = registerItem("magnesium_ingot") {
+        IngotItem(OreType.MAGNESIUM, Item.Properties())
+    }
+    val MITHRIL_INGOT: DeferredItem<Item> = registerItem("mithril_ingot") {
+        IngotItem(OreType.MITHRIL, Item.Properties())
+    }
+    val YELLORIUM_INGOT: DeferredItem<Item> = registerItem("yellorium_ingot") {
+        IngotItem(OreType.YELLORIUM, Item.Properties())
+    }
+    val URANIUM_INGOT: DeferredItem<Item> = registerItem("uranium_ingot") {
+        IngotItem(OreType.URANIUM, Item.Properties())
+    }
+    val THORIUM_INGOT: DeferredItem<Item> = registerItem("thorium_ingot") {
+        IngotItem(OreType.THORIUM, Item.Properties())
+    }
+
     private fun <T : Item> registerItem(name: String, item: () -> T) = ITEMS.register(name) { -> item() }
 
     fun register(eventBus: IEventBus) {
